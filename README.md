@@ -1,5 +1,5 @@
 # tarunvelli
 
-A personal portfolio site using Bootstrap and GitHub pages.
+A personal portfolio site using Skeleton and GitHub pages.
 
-link : https://tarunvelli.github.io/ 
+link : https://tarunvelli.site/ 

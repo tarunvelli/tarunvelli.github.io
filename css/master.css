@@ -1,0 +1,59 @@
+
+.header {
+  margin-top: 5%;
+  border-bottom: 1px solid #000000;
+}
+
+.page {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.page p {
+  margin-top: 10%;
+}
+
+#anchor {
+  float: left;
+}
+
+#anchor a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#nav {
+  float: right;
+  color: #2b9eeb;
+}
+
+#nav a {
+  text-decoration: none;
+}
+
+#nav ul {
+  padding-top: 1em;
+}
+
+#nav li {
+  display: inline;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+
+@media (max-width: 680px) {
+  #anchor {
+    float: none;
+    text-align: center;
+  }
+
+  #nav {
+    float: none;
+    text-align: center;
+  }
+
+  #nav ul {
+    padding-top: 0;
+  }
+}

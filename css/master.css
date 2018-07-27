@@ -1,16 +1,35 @@
 
+.banner {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.bulleted {
+  list-style: circle;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact img {
+  vertical-align:middle;
+  height: 32px;
+  width: 32px;
+}
+
 .header {
   margin-top: 5%;
   border-bottom: 1px solid #000000;
 }
 
-.page {
-  text-align: center;
-  font-size: 1.5em;
+.project {
+  margin-top: 30px;
 }
 
-.page p {
-  margin-top: 10%;
+.title {
+  text-align: center;
+  margin-top: 2%;
 }
 
 #anchor {
@@ -18,17 +37,12 @@
 }
 
 #anchor a {
-  text-decoration: none;
   color: #000000;
 }
 
 #nav {
   float: right;
   color: #2b9eeb;
-}
-
-#nav a {
-  text-decoration: none;
 }
 
 #nav ul {

@@ -7,7 +7,7 @@
   <meta name="author" content="tarun velli">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <script src="js/script.js"></script>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/master.css">
@@ -20,22 +20,265 @@
   <div class="container">
     <div class="row">
       <div class="twelve columns header">
-        <h2 id="anchor"><a href="/">Tarun Vellishetty</a></h2>
+        <h2 id="anchor"><a onclick="openPage('home')">Tarun Vellishetty</a></h2>
         <div id="nav">
           <ul>
-            <li><a href="/resume.html">/resume</a></li>
-            <li><a href="/projects.html">/projects</a></li>
-            <li><a href="/contact.html">/contact</a></li>
+            <li class="tab" id='resume-tab'><a onclick="openPage('resume')">/resume</a></li>
+            <li class="tab" id='projects-tab'><a onclick="openPage('projects')">/projects</a></li>
+            <li class="tab" id='contact-tab'><a onclick="openPage('contact')">/contact</a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="container">
+  <div class="container page" id="home">
     <div class="row">
       <div class="twelve columns banner">
         <h4>Hi. I am a programmer.</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="container page" id="resume">
+    <div class="row">
+      <div class="twelve columns title">
+        <h4>Experience</h4>
+      </div>
+      <div class="eight columns offset-by-two">
+        <ul>
+          <li>
+            <b>Software Developer</b>, <a target="_blank" href="https://www.beautifulcode.co/">BeautifulCode</a>
+            <br>
+            <ul class="bulleted">
+              <li>Web development with RoR</li>
+              <li>Frontend with React</li>
+              <li>Hands on experience with Microservice architectures</li>
+            </ul>
+          </li>
+          <li>
+            <b>Software Developer</b>, <a target="_blank" href="https://automate.io">Automate.io</a>
+            <br>
+            <ul class="bulleted">
+              <li>Worked with 20+ external APIs including Stripe, Google sheets, Twilio etc</li>
+              <li>Solely responsible for quick & iterative development of an MVC app used for SEO</li>
+              <li>Expanded Mailing, Payment and Customer Support features of the product</li>
+            </ul>
+          </li>
+          <li>
+            <b>Risk Invstigator</b>, <a target="_blank" href="https://amazon.com">Amazon</a>
+            <br>
+            <ul class="bulleted">
+              <li>Worked on tool automation and improvement projects</li>
+              <li>Executed multiple deep dive / data analysis efforts</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="twelve columns title">
+        <h4>Open Source Contributions</h4>
+      </div>
+      <div class="eight columns offset-by-two">
+        <ul>
+          <li>
+            <b>Never Kill Your Time</b> <a target="_blank" href="https://github.com/rabingaire/never_kill_your_time/pulls?q=is%3Apr+author%3Atarunvelli">(PRs)</a>
+            <br>
+            <ul class="bulleted">
+              <li>A simple script that creates push notification on gnome desktop environment to remind your routine.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <b>Algorithm archive</b> <a target="_blank" href="https://github.com/algorithm-archivists/algorithm-archive/pulls?utf8=%E2%9C%93&q=is%3Apr+author%3Atarunvelli">(PRs)</a>
+            <br>
+            <ul class="bulleted">
+              <li>A collaborative book on algorithms <a target="_blank" href='https://www.algorithm-archive.org'>https://www.algorithm-archive.org</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <b>Exercism.io javascript track</b> <a target="_blank" href="https://github.com/exercism/javascript/pulls?q=is%3Apr+author%3Atarunvelli">(PRs)</a>
+            <br>
+            <ul class="bulleted">
+              <li>Contributor to the javascript track of <a target="_blank" href="https://exercism.io/">Exercism.io</a></li>
+              <li>Exercism.io is free and Open Source webiste which lets its users download and solve practice problems
+                in over 30 different languages.</li>
+            </ul>
+          </li>
+          <li>
+            <b>Exercism.io javascript track (deprecated)</b> <a target="_blank" href="https://github.com/exercism/DEPRECATED.javascript/pulls?q=is%3Apr+author%3Atarunvelli">(PRs)</a>
+            <br>
+            <ul class="bulleted">
+              <li>Contributor to the Javascript (pre es6) track of Exercism.io</li>
+              <li>Has been deprecated and replaced by the new javascript track</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="twelve columns title">
+        <h4>Blogs / Talks</h4>
+      </div>
+      <div class="eight columns offset-by-two">
+        <ul class="bulleted">
+          <li>
+            <a target="_blank" href="https://www.beautifulcode.co/blog/58-understanding-bittorrent-protocol">Understanding BitTorrent Protocol</a>
+          </li>
+          <li>
+            <a target="_blank" href="https://www.beautifulcode.co/blog/79-how-cryptocurrency-works">How cryptocurrency works</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="twelve columns title">
+        <h4>Tech Stuff</h4>
+      </div>
+      <div class="four columns offset-by-two">
+        <ul>
+          <li>
+            <b>Database</b>
+            <br>
+            MySQL, MongoDb
+          </li>
+          <li>
+            <b>Languages</b>
+            <br>
+            JavaScript, Ruby
+          </li>
+          <li>
+            <b>Frameworks</b>
+            <br>
+            Node, Express, Rails
+          </li>
+        </ul>
+      </div>
+      <div class="four columns">
+        <ul>
+          <li>
+            <b>Web servers</b>
+            <br>
+            Nginx
+          </li>
+          <li>
+            <b>Version control</b>
+            <br>
+            Git
+          </li>
+          <li>
+            <b>Operating System</b>
+            <br>
+            Linux
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="twelve columns title">
+        <h4>Internships / Volunteering</h4>
+      </div>
+      <div class="eight columns offset-by-two">
+        <ul>
+          <li>
+            <b>Student Member</b>, <a target="_blank" href="https://www.aiesec.in/">Aiesec</a>
+            <br>
+            <ul class="bulleted">
+              <li>Coordinating international student exchange programs</li>
+              <li>Built tools for sending bulk emails and for creating visa related documentation</li>
+            </ul>
+          </li>
+          <li>
+            <b>Counsellor</b>, <a target="_blank" href="https://www.linkedin.com/company/voice4girls/">Voice 4 girls</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container page" id="projects">
+    <div class="row">
+      <div class="twelve columns title">
+        <h4>Some of my side projects</h4>
+        <p>Stuff i've built out of necessity or boredom</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="eight columns offset-by-two project">
+        <b>Command line dictionary</b>
+        <br>
+        <br>
+        <ul class="bulleted">
+          <li>command line dictionary built with wordnik API</li>
+          <li>Node</li>
+          <li><a target="_blank" href="https://github.com/tarunvelli/node-dict">View</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="eight columns offset-by-two project">
+        <b>Question paper scrambler</b>
+        <br>
+        <br>
+        <ul class="bulleted">
+          <li>Web tool to create multiple question paper sets</li>
+          <li>Javascript, Html / Css</li>
+          <li><a target="_blank" href="https://tarunvelli.site/question-paper-scrambler/">View</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="eight columns offset-by-two project">
+        <b>Custom Clock Widget</b>
+        <br>
+        <br>
+        <ul class="bulleted">
+          <li>Create a customizable clock widget for desktop</li>
+          <li>Node, Electron</li>
+          <li><a target="_blank" href="https://github.com/tarunvelli/desktop-custom-clock-widget">View</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="eight columns offset-by-two project">
+        <b>Quiz App</b>
+        <br>
+        <br>
+        <ul class="bulleted">
+          <li>Web application to create/take quiz</li>
+          <li>Node, MongoDB, Express</li>
+          <li><a target="_blank" href="https://github.com/tarunvelli/Quiz">View</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container page" id="contact">
+    <div class="row">
+      <div class="twelve columns title">
+        <h4>Can find me on the internet via</h4>
+      </div>
+      <div class="eight columns offset-by-two contact">
+        <ul>
+          <li>
+            <img src="images/email.svg" alt="Email Id">
+            <a target="_blank" href="mailto:tarunvelli@gmail.com">tarunvelli@gmail.com</a>
+          </li>
+          <li>
+            <img src="images/github.svg" alt="Github Id">
+            <a target="_blank" href="https://github.com/tarunvelli">https://github.com/tarunvelli</a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

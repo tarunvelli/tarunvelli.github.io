@@ -1,3 +1,6 @@
+body {
+  overflow-y: scroll;
+}
 
 .banner {
   text-align: center;

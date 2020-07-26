@@ -71,7 +71,30 @@ a:hover {
   cursor: pointer;
 }
 
+.quarter-width {
+  width: 25%;
+}
+
+.project-image {
+  width: 100%;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: antiquewhite;
+}
+
+@media (min-width: 680px) {
+  .project:nth-child(odd) {
+    direction: rtl;
+  }
+}
+
+
 @media (max-width: 680px) {
+  .project-image {
+    display: none;
+  }
+
   #anchor {
     float: none;
     text-align: center;

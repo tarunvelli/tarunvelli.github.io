@@ -1,0 +1,137 @@
+baseURL: "https://tarunvelli.site/"
+title: Tarun Vellishetty
+paginate: 5
+theme: PaperMod
+publishDir: "docs"
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: UA-123-45
+
+minify:
+    disableXML: true
+    minifyOutput: true
+
+params:
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    title: Tarun Vellishetty
+    description: "portfolio and blog"
+    keywords: [Blog, Portfolio, PaperMod]
+    author: "Tarun Vellishetty"
+    # author: ["Me", "You"] # multiple authors
+    images: []
+    DateFormat: "January 2, 2006"
+    defaultTheme: auto # dark, light
+    disableThemeToggle: false
+
+    ShowReadingTime: true
+    ShowShareButtons: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: false
+    disableSpecial1stPost: false
+    disableScrollToTop: false
+    comments: false
+    hidemeta: false
+    hideSummary: false
+    hideBreadcrumbs: false
+    showtoc: false
+    tocopen: false
+
+    assets:
+        # disableHLJS: true # to disable highlight.js
+        # disableFingerprinting: true
+        favicon:
+        favicon16x16:
+        favicon32x32:
+        apple_touch_icon:
+        safari_pinned_tab:
+
+    label:
+        text: "Home"
+
+    # profile-mode
+    profileMode:
+        enabled: true # needs to be explicitly set
+        title: Tarun Vellishetty
+        subtitle: "Fullstack web developer"
+        imageUrl: "https://avatars.githubusercontent.com/u/19463001"
+        imageWidth: 120
+        imageHeight: 120
+        imageTitle: picture
+        buttons:
+
+    # home-info mode
+    homeInfoParams:
+        Title: "Hi there \U0001F44B"
+        Content: Welcome to my blog
+
+    socialIcons:
+        - name: linkedin
+          url: "https://www.linkedin.com/in/tarun-velli"
+        - name: github
+          url: "https://github.com/tarunvelli"
+        - name: keybase
+          url: "https://keybase.io/tarunvelli"
+        - name: email
+          url: "mailto:tarunvelli@gmail.com"
+
+    analytics:
+        google:
+            SiteVerificationTag: "XYZabc"
+        bing:
+            SiteVerificationTag: "XYZabc"
+        yandex:
+            SiteVerificationTag: "XYZabc"
+
+    cover:
+        hidden: true # hide everywhere but not in structured data
+        hiddenInList: true # hide on list pages and home
+        hiddenInSingle: true # hide on single page
+
+    editPost:
+        URL: "https://github.com/tarunvelli/tarunvelli.github.io/blob/master/content"
+        Text: "Suggest Changes" # edit text
+        appendFilePath: true # to append file path to Edit link
+
+    # for search
+    # https://fusejs.io/api/options.html
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+menu:
+    main:
+        - identifier: about
+          name: About
+          url: /page/about
+          weight: 1
+        - identifier: projects
+          name: Projects
+          url: /project/
+          weight: 2
+        - identifier: blog
+          name: Blog
+          url: /post/
+          weight: 3
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 4
+
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+# pygmentsUseClasses: true
+# markup:
+#     highlight:
+#         # anchorLineNos: true
+#         codeFences: true
+#         guessSyntax: true
+#         lineNos: true
+#         style: monokai

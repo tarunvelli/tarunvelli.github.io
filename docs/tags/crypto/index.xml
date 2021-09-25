@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>crypto on Tarun Vellishetty</title>
+    <link>https://tarunvelli.site/tags/crypto/</link>
+    <description>Recent content in crypto on Tarun Vellishetty</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 26 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://tarunvelli.site/tags/crypto/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How Cryptocurrency works</title>
+      <link>https://tarunvelli.site/post/how-cryptocurrency-works/</link>
+      <pubDate>Tue, 26 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tarunvelli.site/post/how-cryptocurrency-works/</guid>
+      <description>Cryptocurrency is a distributed list of transactions. This list of transactions function as a digital/virtual currency.</description>
+    </item>
+    
+  </channel>
+</rss>

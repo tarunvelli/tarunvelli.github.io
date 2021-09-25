@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tarun Vellishetty</title>
+    <link>https://tarunvelli.site/</link>
+    <description>Recent content on Tarun Vellishetty</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 26 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://tarunvelli.site/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How Cryptocurrency works</title>
+      <link>https://tarunvelli.site/post/how-cryptocurrency-works/</link>
+      <pubDate>Tue, 26 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tarunvelli.site/post/how-cryptocurrency-works/</guid>
+      <description>Cryptocurrency is a distributed list of transactions. This list of transactions function as a digital/virtual currency.</description>
+    </item>
+    
+    <item>
+      <title>Understanding BitTorrent Protocol</title>
+      <link>https://tarunvelli.site/post/understanding-bitrorrent-protocol/</link>
+      <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tarunvelli.site/post/understanding-bitrorrent-protocol/</guid>
+      <description>Simply put, the BitTorrent protocol is a P2P file sharing protocol.</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>https://tarunvelli.site/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tarunvelli.site/page/about/</guid>
+      <description>Experience  Senior Software Engineer, BeautifulCode  Web development with RoR Golang Microservices and cloudfunctions Frontend with React Docker + Kubernetes for build and deploy systems   Software Developer, Automate.io  Integrated 20+ external APIs including Stripe, Google sheets, Twilio etc Maintainer of an MVC app to list integrations Expanded Mailing, Payment and Customer Support features of the product   Risk Analyst, Amazon  Worked on tool automation and improvement projects Executed multiple deep dive / data analysis efforts    Open Source Contributions  Never Kill Your Time (PRs)  A simple script that creates push notification on gnome desktop environment to remind your routine.</description>
+    </item>
+    
+    <item>
+      <title>CLI Dictionary</title>
+      <link>https://tarunvelli.site/project/cli-dictionary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tarunvelli.site/project/cli-dictionary/</guid>
+      <description>command line dictionary built with wordnik API</description>
+    </item>
+    
+    <item>
+      <title>Custom clock widget</title>
+      <link>https://tarunvelli.site/project/clock-widget/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tarunvelli.site/project/clock-widget/</guid>
+      <description>Create a customized clock widget for your desktop</description>
+    </item>
+    
+    <item>
+      <title>Ordbot</title>
+      <link>https://tarunvelli.site/project/ordbot/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tarunvelli.site/project/ordbot/</guid>
+      <description>SAAS Project that enables small to medium vendors to sell via WhatsApp</description>
+    </item>
+    
+    <item>
+      <title>Scrambler</title>
+      <link>https://tarunvelli.site/project/scrambler/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://tarunvelli.site/project/scrambler/</guid>
+      <description>Web tool to create multiple question paper sets</description>
+    </item>
+    
+  </channel>
+</rss>

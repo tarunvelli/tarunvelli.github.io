@@ -16,11 +16,13 @@ Cryptocurrency is a distributed list of transactions. This list of transactions 
 
 To understand how a list of transactions can function as a currency, let’s take an example of a poker game. Instead of playing with poker chips, the players maintain a list of all transactions being made. This list of transactions is also called as a “Ledger”.
 
-
+![ledger](/assets/crypto/crypto_1.png#center)
 
 The sample ledger above starts with stating how much credit each player initially owns. Before adding a new transaction to the list we can verify if the player has the required credits by going through the ledger.
 
-Instead of resolving the ledger by paying each other in cash, the players can decide to continue the ledger after the game. When ever they need to pay each other, they can just transfer credits on this ledger. For example, John agrees to sell a water bottle to Bob for 20 credits, and this will be recorded on the ledger. So here we can say that the ledger credits have been used as a currency. 
+Instead of resolving the ledger by paying each other in cash, the players can decide to continue the ledger after the game. When ever they need to pay each other, they can just transfer credits on this ledger. For example, John agrees to sell a water bottle to Bob for 20 credits, and this will be recorded on the ledger. So here we can say that the ledger credits have been used as a currency.
+
+![currency](/assets/crypto/crypto_2.png#center)
 
 ## Blockchain
 
@@ -30,15 +32,16 @@ In a blockchain the list of transactions are saved in blocks. Each block contain
 
 A Cryptographic hash, simply referred to as a hash, is a random looking string of fixed length computed from given data. The hash is like a fingerprint for the data, and will completely change with even a little change to the data. Eg SHA256.
 
-
+![hash](/assets/crypto/crypto_3.png#center)
 
 The cryptographic hash of all the transactions in a block, say B1,is added at the bottom of itself. The next block, say B2, will contain the hash of the previous block B1 at the top. The hash of B2 is computed by using all the transactions in B2 and the hash of B1.
 This way all the blocks are chained and form a coherent ledger.
 
-
+![chain](/assets/crypto/crypto_4.png#center)
 
 Blockchain is a decentralized system, i.e. there is no central authority. All the peers maintain a copy of the ledger, and hence blockchain is a type of a “Distributed ledger”.
 
+![distributed](/assets/crypto/crypto_5.png#center)
 
 Users can get cryptocurrency by either mining or buying from other users. Whenever a user wants to add a transaction to this distributed ledger, they will broadcast it to the network. A few peers of the network collate transactions into ‘blocks’ and broadcast the block. These peers which collate the transactions into blocks are called miners. When a new block is broadcast to the network, all the peers add it to their respective private copy of the blockchain.
 
@@ -49,25 +52,27 @@ But the above system has a lot of issues and flaws, such as validity of transact
 ### Signatures
 To make sure that a transaction is being added by the correct user, the transaction is digitally signed. This process involves a Public key and a Private key. The private key is supposed to be kept secret. To sign a transaction, the message and private are passed through a signing function which produces a unique signature.
 
-
+![signature](/assets/crypto/crypto_6.png#center)
 
 The message contains the details of transfer i.e. “Bob transfers 10 to Alice”. The signature will change if the transaction details change. So another person, cannot add a fake transaction like “Bob transfers 10 to John” using the previous transaction’s sign.
 
+![prevent fake](/assets/crypto/crypto_7.png#center)
 
 
 The message also contains row number. This ensures that Alice can’t duplicate transactions of the original.
 
-
+![prevent duplicate](/assets/crypto/crypto_8.png#center)
 
 The signature can be verified by passing the message, sign and public key to a verify function. The output of this function will be true or false.
 
+![verify](/assets/crypto/crypto_9.png#center)
 
 ### Proof of work
 Another problem that arises is figuring out if a block is valid or not. As users could try to add invalid transactions, miners could also try to add invalid blocks. Bitcoin chooses to consider blocks with proof of work as valid.
 
 To validate a block miners have to find a special number called ‘nonce’. This nonce along with all the data in the block is supposed to create a hash that starts with a given number of zeros, let’s say 30 zeros. The probability that a hash starts with 30 zeros is 1/(2^30). The only way to find the nonce is to guess through 2^30 numbers. Verifying the nonce is easy we just have to pass the messages of the block and nonce to the hash function and count the number of zeros in the resultant hash.
 
-
+![prevent fake](/assets/crypto/crypto_10.png#center)
 
 A valid block contains a valid nonce, and is said to be signed. We trust it to be valid because the only way a miner can find the nonce is by guessing through a large set of numbers, hence a valid nonce can be taken as proof of work.
 
@@ -76,10 +81,12 @@ The number of zeros in hash is not fixed. As more miners join the pool, chances 
 ### Longest Chain
 Sometimes a peer can receive two valid blocks at the same time. In such a case a peer will wait for more blocks to receive, and will trust the chain with more blocks. The longer which has more blocks has more work put into it, hence it is considered as trustworthy.
 
+![prevent fake](/assets/crypto/crypto_11.png#center)
+
 ### Mining
 Validating a block is computationally intensive. To incentivise mining new blocks, the first miner who mines the block gets to add a special transaction at the top of the block which “creates” bitcoins which are rewarded to the miner. This is called as a Coinbase transaction and are these transactions are not signed. All Bitcoins in existence have been created by these coinbase transactions.
 
-
+![prevent fake](/assets/crypto/crypto_12.png#center)
 
 Currently on 26th March 2018 the reward for mining a block is 12.5 BTC. This value halves every 210,000 blocks or roughly 4 years. This means that the maximum bitcoins in the network can only reach 21 million bitcoins and the reward will reach 0 by ~2140.
 

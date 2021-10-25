@@ -21,11 +21,17 @@ Unlike classic server/client model, where the client always initiates the commun
 
 P2P networks can be broadly divided into two categories:-
 
-- A pure P2P network is a P2P network where “any single, arbitrary chosen peer can be removed from the network without having the network suffering any loss of network service”. That is, all nodes are absolutely equal and there is no single point dependency.
+- A pure P2P network is a P2P network where “any single, arbitrary chosen peer can be removed from the network without having the network suffering any loss of network service”.
+
+That is, all nodes are absolutely equal and there is no single point dependency.
+
+![pure p2p](/assets/torrent/torrent_1.png#center)
 
 - A Hybrid P2P network is a P2P network where “a central entity is necessary to provide parts of the offered network services”.
 
 BitTorrent’s original form matches Hybrid P2P concept.
+
+![hybrid p2p](/assets/torrent/torrent_2.png#center)
 
 ## BitTorrent Architecture
 
@@ -37,6 +43,8 @@ The architecture normally consists of the following entities:
 - a static metainfo file (a torrent file)
 - an original downloader (seed)
 - the end user downloader (leecher)
+
+![architecture](/assets/torrent/torrent_3.png#center)
 
 ### Tracker
 
@@ -76,18 +84,22 @@ Piece selection is important to ensure that the swarm has all the required parts
 ### Random first piece
 An exception to the rarest first is the absolute first piece which is downloaded. As the rarest piece is least available and might be slower to download, the first piece to be downloaded is chosen at random. This way the peer can quickly receive a piece and start uploading.
 
+![random first piece](/assets/torrent/torrent_4.png#center)
 
 ### Rarest first
 As the name clearly states, when deciding which piece has to be downloaded next, the rarest piece present in the swarm is selected. Some deployments remove the original seed due to reasons such as cost etc. When peers always choose the rarest available piece, all the pieces of the file will be quickly replicated and can avoid ‘losing’ a piece.
 
+![rarest first](/assets/torrent/torrent_5.png#center)
 
 ### Strict Policy
 As mentioned earlier, a file is partitioned into ‘pieces’ before downloading. These pieces are again subdivided into ‘sub-pieces’. When a sub-piece is requested, the remaining sub-pieces of the same piece are requested before any other piece. With this pieces can be assembled quickly, and will be available for other peers.
 
+![strict policy](/assets/torrent/torrent_6.png#center)
 
 ### Endgame mode
 When the pieces are requested from peers, it could happen that a peer with low upload speed is selected. This can be amplified during the end of the download as the download reaches completion due to the tendency for the remaining pieces to be downloaded from peers with saturated connections. This is avoided by sending a request to all peers for the piece instead of waiting for a single peer. The overhead for this is negligible as the endgame mode is relatively short, but cannot be used for all pieces as that would cause considerable overhead.
 
+![endgame](/assets/torrent/torrent_7.png#center)
 
 These policies ensure piece availability but do ensure an individual client’s download efficiency.
 

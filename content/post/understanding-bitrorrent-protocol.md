@@ -13,6 +13,8 @@ Simply put, the BitTorrent protocol is a P2P file sharing protocol.
 
 First, let's look into what peer-to-peer networks are before understanding how BitTorrent operates. 
 
+Video presentation : https://www.youtube.com/watch?v=8sTttjDmNbk
+
 ## Brief intro to P2P networks
 
 P2P stands for peer to peer. The definition of P2P is ‘A communications model in which each party has the same capabilities and either party can initiate a communication session’.

@@ -19,7 +19,7 @@ params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
     title: Tarun Vellishetty
     description: "portfolio and blog"
-    keywords: [Blog, Portfolio, Projects]
+    keywords: [Blog, Portfolio]
     author: "Tarun Vellishetty"
     # author: ["Me", "You"] # multiple authors
     images: []
@@ -57,7 +57,7 @@ params:
     profileMode:
         enabled: true # needs to be explicitly set
         title: Tarun Vellishetty
-        subtitle: "Fullstack web developer"
+        subtitle: "Software Engineer. Sort of."
         imageUrl: "https://avatars.githubusercontent.com/u/19463001"
         imageWidth: 120
         imageHeight: 120
@@ -113,18 +113,14 @@ menu:
           name: About
           url: /page/about
           weight: 1
-        - identifier: projects
-          name: Projects
-          url: /project/
-          weight: 2
         - identifier: blog
           name: Blog
           url: /post/
-          weight: 3
+          weight: 2
         - identifier: tags
           name: Tags
           url: /tags/
-          weight: 4
+          weight: 3
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 # pygmentsUseClasses: true

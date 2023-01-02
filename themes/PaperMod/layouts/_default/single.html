@@ -9,6 +9,11 @@
       {{ .Title }}
       {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
     </h1>
+    {{- if .Param "repo" }}
+    <div class="post-description">
+      <a href="{{ .Param "repo" }}" target="_blank">{{ .Param "repo" }}</a>
+    </div>
+    {{- end }}
     {{- if .Description }}
     <div class="post-description">
       {{ .Description }}

@@ -6,24 +6,6 @@
     <description>Recent content in Projects on Tarun Vellishetty</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="https://tarunvelli.site/project/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>CLI Dictionary</title>
-      <link>https://tarunvelli.site/project/cli-dictionary/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tarunvelli.site/project/cli-dictionary/</guid>
-      <description>command line dictionary built with wordnik API</description>
-    </item>
-    
-    <item>
-      <title>Custom clock widget</title>
-      <link>https://tarunvelli.site/project/clock-widget/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tarunvelli.site/project/clock-widget/</guid>
-      <description>Create a customized clock widget for your desktop</description>
-    </item>
-    
-    <item>
       <title>Ordbot</title>
       <link>https://tarunvelli.site/project/ordbot/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -33,12 +15,12 @@
     </item>
     
     <item>
-      <title>Scrambler</title>
-      <link>https://tarunvelli.site/project/scrambler/</link>
+      <title>Rails tabler template</title>
+      <link>https://tarunvelli.site/project/rails-tabler-template/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://tarunvelli.site/project/scrambler/</guid>
-      <description>Web tool to create multiple question paper sets</description>
+      <guid>https://tarunvelli.site/project/rails-tabler-template/</guid>
+      <description>Saas starter boilerplate to quickly build MVPs</description>
     </item>
     
   </channel>

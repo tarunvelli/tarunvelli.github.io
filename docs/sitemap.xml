@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://tarunvelli.site/tags/bittorrent/</loc>
+    <lastmod>2023-07-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tarunvelli.site/tags/filebrowser/</loc>
+    <lastmod>2023-07-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tarunvelli.site/tags/openvpn/</loc>
+    <lastmod>2023-07-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tarunvelli.site/tags/pihole/</loc>
+    <lastmod>2023-07-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tarunvelli.site/post/</loc>
+    <lastmod>2023-07-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tarunvelli.site/tags/</loc>
+    <lastmod>2023-07-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tarunvelli.site/</loc>
+    <lastmod>2023-07-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tarunvelli.site/tags/transmission/</loc>
+    <lastmod>2023-07-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tarunvelli.site/post/vps-setup/</loc>
+    <lastmod>2023-07-22T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://tarunvelli.site/tags/bitcoin/</loc>
     <lastmod>2019-03-26T00:00:00+00:00</lastmod>
   </url><url>
@@ -13,18 +40,6 @@
   </url><url>
     <loc>https://tarunvelli.site/post/how-cryptocurrency-works/</loc>
     <lastmod>2019-03-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tarunvelli.site/post/</loc>
-    <lastmod>2019-03-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tarunvelli.site/tags/</loc>
-    <lastmod>2019-03-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tarunvelli.site/</loc>
-    <lastmod>2019-03-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tarunvelli.site/tags/bittorrent/</loc>
-    <lastmod>2019-02-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tarunvelli.site/post/understanding-bitrorrent-protocol/</loc>
     <lastmod>2019-02-26T00:00:00+00:00</lastmod>

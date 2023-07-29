@@ -1,16 +1,20 @@
 ---
 title: "Rails tabler template"
 summary: "Saas starter boilerplate to quickly build MVPs"
-description: ""
 repo: "https://github.com/tarunvelli/rails-tabler-starter"
-hidemeta: true
+tags: [
+    "rails",
+    "template",
+    "starter kit"
+]
+date: "2022-10-26"
 ---
-
-# rails-tabler-starter
 
 Rails starter boilerplate that you can clone and build on top of
 
 [Click here](https://rails-tabler.fly.dev) to view demo application
+
+[Github](https://github.com/tarunvelli/rails-tabler-starter)
 
 ## Overview
 

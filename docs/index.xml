@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tarun Vellishetty</title>
     <link>https://tarunvelli.site/</link>
     <description>Recent content on Tarun Vellishetty</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <lastBuildDate>Sat, 22 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tarunvelli.site/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>VPS setup</title>
@@ -13,6 +14,24 @@
       
       <guid>https://tarunvelli.site/post/vps-setup/</guid>
       <description>Setup for my VPS instance that I use for VPN / Torrents. Documenting it so that I can re-setup if it gets wrecked.</description>
+    </item>
+    
+    <item>
+      <title>Rails tabler template</title>
+      <link>https://tarunvelli.site/project/rails-tabler-template/</link>
+      <pubDate>Wed, 26 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://tarunvelli.site/project/rails-tabler-template/</guid>
+      <description>Saas starter boilerplate to quickly build MVPs</description>
+    </item>
+    
+    <item>
+      <title>Ordbot</title>
+      <link>https://tarunvelli.site/project/ordbot/</link>
+      <pubDate>Sat, 18 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://tarunvelli.site/project/ordbot/</guid>
+      <description>SAAS Project that enables small to medium vendors to sell via WhatsApp</description>
     </item>
     
     <item>
@@ -31,42 +50,6 @@
       
       <guid>https://tarunvelli.site/post/understanding-bitrorrent-protocol/</guid>
       <description>Simply put, the BitTorrent protocol is a P2P file sharing protocol.</description>
-    </item>
-    
-    <item>
-      <title>About Me</title>
-      <link>https://tarunvelli.site/page/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tarunvelli.site/page/about/</guid>
-      <description>Exceptional in nothing in particular
-Qualified for far lesser important things
-Convenient access to disappointment
-Provides running commentary of bullshit
-A complete 10 in IQ
-Zero accomplishments to name
-Not only going slow but also going nowhere
-Severely limited by the lack of understanding of what I&amp;rsquo;m doing
-Occasionally adequate
-Expert at shapes, colors, and shiny things</description>
-    </item>
-    
-    <item>
-      <title>Ordbot</title>
-      <link>https://tarunvelli.site/project/ordbot/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tarunvelli.site/project/ordbot/</guid>
-      <description>SAAS Project that enables small to medium vendors to sell via WhatsApp</description>
-    </item>
-    
-    <item>
-      <title>Rails tabler template</title>
-      <link>https://tarunvelli.site/project/rails-tabler-template/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://tarunvelli.site/project/rails-tabler-template/</guid>
-      <description>Saas starter boilerplate to quickly build MVPs</description>
     </item>
     
   </channel>

@@ -1,12 +1,17 @@
 ---
 title: "Ordbot"
 summary: "SAAS Project that enables small to medium vendors to sell via WhatsApp"
-description: "SAAS Project that enables small to medium vendors to sell via WhatsApp"
 repo: "https://github.com/tarunvelli/ordbot"
-hidemeta: true
+tags: [
+    "rails",
+    "whatsapp",
+]
+date: "2020-07-18"
 ---
 
 ![ordbot](/assets/ordbot.gif)
+
+[Github](https://github.com/tarunvelli/ordbot)
 
 # Installation
 

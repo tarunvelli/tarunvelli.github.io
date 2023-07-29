@@ -1,15 +1,198 @@
-<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Ordbot | Tarun Vellishetty</title><meta name=keywords content><meta name=description content="SAAS Project that enables small to medium vendors to sell via WhatsApp"><meta name=author content="Tarun Vellishetty"><link rel=canonical href=https://tarunvelli.site/project/ordbot/><link crossorigin=anonymous href=/assets/css/stylesheet.min.08c4fda488014b6530572a4b5e695eb6bfb7f017b14fdaceae7fa1bd9a202afd.css integrity="sha256-CMT9pIgBS2UwVypLXmletr+38BexT9rOrn+hvZogKv0=" rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js integrity="sha256-uVus3DnjejMqn4g7Hni+Srwf3KK8HyZB9V4809q9TWE=" onload=hljs.initHighlightingOnLoad()></script>
-<link rel=icon href=https://tarunvelli.site/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://tarunvelli.site/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://tarunvelli.site/favicon-32x32.png><link rel=apple-touch-icon href=https://tarunvelli.site/apple-touch-icon.png><link rel=mask-icon href=https://tarunvelli.site/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.108.0"><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,i=t.createElement(n),a=t.getElementsByTagName(n)[0],i.async=1,i.src=s,a.parentNode.insertBefore(i,a)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-123-45","auto"),ga("send","pageview"))</script><meta property="og:title" content="Ordbot"><meta property="og:description" content="SAAS Project that enables small to medium vendors to sell via WhatsApp"><meta property="og:type" content="article"><meta property="og:url" content="https://tarunvelli.site/project/ordbot/"><meta property="article:section" content="project"><meta property="og:site_name" content="Tarun Vellishetty"><meta name=twitter:card content="summary"><meta name=twitter:title content="Ordbot"><meta name=twitter:description content="SAAS Project that enables small to medium vendors to sell via WhatsApp"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Projects","item":"https://tarunvelli.site/project/"},{"@type":"ListItem","position":2,"name":"Ordbot","item":"https://tarunvelli.site/project/ordbot/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Ordbot","name":"Ordbot","description":"SAAS Project that enables small to medium vendors to sell via WhatsApp","keywords":[],"articleBody":" Installation Prerequisites Local Ruby: we recommend using rvm to manage the Ruby versions. Install the requried ruby version with rvm. rvm install 2.6.5 Yarn 1.x: please refer to their installation guide. PostgreSQL 11 or higher. Production Local setup + Redis 4 or higher. Elasticsearch 7 or higher. Steps Clone repository git clone https://github.com/tarunvelli/ordbot.git Change into into repo directory cd ordbot Install gems bundle install Install node_modules yarn install Add .env file (can copy .env_sample) and add required values\nTo generate keys for ACCOUNT_SID_ENCRYPTION_KEY and AUTH_TOEKN_ENCRYPTION_KEY run the following in rails console and copy to .env `rake secret\\`[0..31] To generate keys for CIPHER_KEY run the following in rails console and copy to .env len = ActiveSupport::MessageEncryptor.key_len salt = SecureRandom.random_bytes(len) key = ActiveSupport::KeyGenerator.new('').generate_key(salt, len) Base64.encode64(key) Run the server rails server The app will be available at http://localhost:3000 ","wordCount":"135","inLanguage":"en","datePublished":"0001-01-01T00:00:00Z","dateModified":"0001-01-01T00:00:00Z","author":{"@type":"Person","name":"Tarun Vellishetty"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tarunvelli.site/project/ordbot/"},"publisher":{"@type":"Organization","name":"Tarun Vellishetty","logo":{"@type":"ImageObject","url":"https://tarunvelli.site/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://tarunvelli.site/ accesskey=h title="Home (Alt + H)">Home</a>
-<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://tarunvelli.site/page/about title=About><span>About</span></a></li><li><a href=https://tarunvelli.site/post/ title=Blog><span>Blog</span></a></li><li><a href=https://tarunvelli.site/project/ title=Projects><span>Projects</span></a></li><li><a href=https://tarunvelli.site/tags/ title=Tags><span>Tags</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://tarunvelli.site/>Home</a>&nbsp;»&nbsp;<a href=https://tarunvelli.site/project/>Projects</a></div><h1 class=post-title>Ordbot</h1><div class=post-description><a href=https://github.com/tarunvelli/ordbot target=_blank>https://github.com/tarunvelli/ordbot</a></div><div class=post-description>SAAS Project that enables small to medium vendors to sell via WhatsApp</div></header><div class=post-content><p><img loading=lazy src=/assets/ordbot.gif alt=ordbot></p><h1 id=installation>Installation<a hidden class=anchor aria-hidden=true href=#installation>#</a></h1><h2 id=prerequisites>Prerequisites<a hidden class=anchor aria-hidden=true href=#prerequisites>#</a></h2><h3 id=local>Local<a hidden class=anchor aria-hidden=true href=#local>#</a></h3><ul><li><a href=https://www.ruby-lang.org/en/>Ruby</a>: we recommend using
-<a href=https://rvm.io/>rvm</a> to manage the Ruby versions. Install the requried ruby version with rvm. <code>rvm install 2.6.5</code></li><li><a href=https://yarnpkg.com/>Yarn</a> 1.x: please refer to their
-<a href=https://classic.yarnpkg.com/en/docs/install>installation guide</a>.</li><li><a href=https://www.postgresql.org/>PostgreSQL</a> 11 or higher.</li></ul><h3 id=production>Production<a hidden class=anchor aria-hidden=true href=#production>#</a></h3><ul><li>Local setup +</li><li><a href=https://redis.io/>Redis</a> 4 or higher.</li><li><a href=https://www.elastic.co>Elasticsearch</a> 7 or higher.</li></ul><h2 id=steps>Steps<a hidden class=anchor aria-hidden=true href=#steps>#</a></h2><ul><li>Clone repository</li></ul><pre tabindex=0><code>git clone https://github.com/tarunvelli/ordbot.git
-</code></pre><ul><li>Change into into repo directory</li></ul><pre tabindex=0><code>cd ordbot
-</code></pre><ul><li>Install gems</li></ul><pre tabindex=0><code>bundle install
-</code></pre><ul><li>Install node_modules</li></ul><pre tabindex=0><code>yarn install
-</code></pre><ul><li><p>Add .env file (can copy .env_sample) and add required values</p><ul><li>To generate keys for ACCOUNT_SID_ENCRYPTION_KEY and AUTH_TOEKN_ENCRYPTION_KEY run the following in rails console and copy to .env</li></ul></li></ul><pre tabindex=0><code>`rake secret\`[0..31]
-</code></pre><ul><li>To generate keys for CIPHER_KEY run the following in rails console and copy to .env</li></ul><pre tabindex=0><code>len   = ActiveSupport::MessageEncryptor.key_len
-salt  = SecureRandom.random_bytes(len)
-key   = ActiveSupport::KeyGenerator.new(&#39;&lt;some_password&gt;&#39;).generate_key(salt, len)
-Base64.encode64(key)
-</code></pre><ul><li>Run the server</li></ul><pre tabindex=0><code>rails server
-</code></pre><ul><li>The app will be available at http://localhost:3000</li></ul></div><footer class=post-footer></footer></article></main><footer class=footer><span>&copy; 2023 <a href=https://tarunvelli.site/>Tarun Vellishetty</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></a><script>let menu=document.getElementById("menu");menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Ordbot | Tarun Vellishetty</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="SAAS Project that enables small to medium vendors to sell via WhatsApp">
+<meta name="generator" content="Hugo 0.108.0">
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+
+
+
+
+
+
+
+  </head>
+
+  <body>
+    <nav class="navigation">
+	
+		<a href="/"> <span class="arrow">←</span>Home</a>
+	
+
+	<a href="/about">About</a>
+	
+		<a href="/project">Projects</a>
+	
+		<a href="/post">Blog</a>
+	
+	<a href="/tags">Tags</a>
+
+	
+	  <a class="button" href="https://tarunvelli.site/index.xml">Subscribe</a>
+	
+</nav>
+
+
+    <main class="main">
+      
+
+<section id="single">
+    <h1 class="title">Ordbot</h1>
+
+    <div class="tip">
+        <time datetime="2020-07-18 00:00:00 &#43;0000 UTC">Jul 18, 2020</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          139 words
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          1 minute read
+        </span>
+    </div>
+
+    
+    
+
+
+    <div class="content">
+      <p><p class="markdown-image">
+  <img src="/assets/ordbot.gif" alt="ordbot"  />
+</p></p>
+<p><a href="https://github.com/tarunvelli/ordbot" target="_blank" rel="noopener">Github</a></p>
+<h1 id="installation">Installation <a href="#installation" class="anchor">🔗</a></h1><h2 id="prerequisites">Prerequisites <a href="#prerequisites" class="anchor">🔗</a></h2><h3 id="local">Local <a href="#local" class="anchor">🔗</a></h3><ul>
+<li><a href="https://www.ruby-lang.org/en/" target="_blank" rel="noopener">Ruby</a>: we recommend using
+<a href="https://rvm.io/" target="_blank" rel="noopener">rvm</a> to manage the Ruby versions. Install the requried ruby version with rvm.  <code>rvm install 2.6.5</code></li>
+<li><a href="https://yarnpkg.com/" target="_blank" rel="noopener">Yarn</a> 1.x: please refer to their
+<a href="https://classic.yarnpkg.com/en/docs/install" target="_blank" rel="noopener">installation guide</a>.</li>
+<li><a href="https://www.postgresql.org/" target="_blank" rel="noopener">PostgreSQL</a> 11 or higher.</li>
+</ul>
+<h3 id="production">Production <a href="#production" class="anchor">🔗</a></h3><ul>
+<li>Local setup +</li>
+<li><a href="https://redis.io/" target="_blank" rel="noopener">Redis</a> 4 or higher.</li>
+<li><a href="https://www.elastic.co" target="_blank" rel="noopener">Elasticsearch</a> 7 or higher.</li>
+</ul>
+<h2 id="steps">Steps <a href="#steps" class="anchor">🔗</a></h2><ul>
+<li>Clone repository</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>git clone https://github.com/tarunvelli/ordbot.git
+</span></span></code></pre></div><ul>
+<li>Change into into repo directory</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cd ordbot
+</span></span></code></pre></div><ul>
+<li>Install gems</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>bundle install
+</span></span></code></pre></div><ul>
+<li>Install node_modules</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>yarn install
+</span></span></code></pre></div><ul>
+<li>
+<p>Add .env file (can copy .env_sample) and add required values</p>
+<ul>
+<li>To generate keys for ACCOUNT_SID_ENCRYPTION_KEY and AUTH_TOEKN_ENCRYPTION_KEY run the following in rails console and copy to .env</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>`rake secret\`[0..31]
+</span></span></code></pre></div><ul>
+<li>To generate keys for CIPHER_KEY run the following in rails console and copy to .env</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>len   = ActiveSupport::MessageEncryptor.key_len
+</span></span><span style="display:flex;"><span>salt  = SecureRandom.random_bytes(len)
+</span></span><span style="display:flex;"><span>key   = ActiveSupport::KeyGenerator.new(&#39;&lt;some_password&gt;&#39;).generate_key(salt, len)
+</span></span><span style="display:flex;"><span>Base64.encode64(key)
+</span></span></code></pre></div><ul>
+<li>Run the server</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rails server
+</span></span></code></pre></div><ul>
+<li>The app will be available at http://localhost:3000</li>
+</ul>
+
+    </div>
+
+    
+        <div class="tags">
+            
+                <a href="https://tarunvelli.site/tags/rails">rails</a>
+            
+                <a href="https://tarunvelli.site/tags/whatsapp">whatsapp</a>
+            
+        </div>
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+        <div id="social">
+
+
+    <a class="symbol" href="mailto:tarunvelli@gmail.com" rel="me" target="_blank">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#bbbbbb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
+   <path d="M3 7l9 6l9 -6"></path>
+</svg>
+    </a>
+
+    <a class="symbol" href="https://github.com/tarunvelli" rel="me" target="_blank">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#bbbbbb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+</svg>
+    </a>
+
+    <a class="symbol" href="https://www.linkedin.com/in/tarun-velli" rel="me" target="_blank">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#bbbbbb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+   <path d="M8 11l0 5"></path>
+   <path d="M8 8l0 .01"></path>
+   <path d="M12 16l0 -5"></path>
+   <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+</svg>
+    </a>
+
+
+</div>
+
+    
+
+    
+</footer>
+
+
+
+  </body>
+</html>

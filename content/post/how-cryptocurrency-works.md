@@ -1,6 +1,5 @@
 ---
 title: "How Cryptocurrency works"
-description: ""
 tags: [
     "bitcoin",
     "distributed",
@@ -76,7 +75,7 @@ To validate a block miners have to find a special number called ‘nonce’. Thi
 
 A valid block contains a valid nonce, and is said to be signed. We trust it to be valid because the only way a miner can find the nonce is by guessing through a large set of numbers, hence a valid nonce can be taken as proof of work.
 
-The number of zeros in hash is not fixed. As more miners join the pool, chances of finding the number quickly increases. So Bitcoin can choose to increase the number of zero, which increases the difficulty. The difficulty is maintained in such a way that the average time to add a new block is 10 mins. 
+The number of zeros in hash is not fixed. As more miners join the pool, chances of finding the number quickly increases. So Bitcoin can choose to increase the number of zero, which increases the difficulty. The difficulty is maintained in such a way that the average time to add a new block is 10 mins.
 
 ### Longest Chain
 Sometimes a peer can receive two valid blocks at the same time. In such a case a peer will wait for more blocks to receive, and will trust the chain with more blocks. The longer which has more blocks has more work put into it, hence it is considered as trustworthy.

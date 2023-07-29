@@ -1,6 +1,5 @@
 ---
 title: "Understanding BitTorrent Protocol"
-description: ""
 tags: [
     "bittorrent",
     "distributed"
@@ -11,7 +10,7 @@ summary: "Simply put, the BitTorrent protocol is a P2P file sharing protocol."
 
 Simply put, the BitTorrent protocol is a P2P file sharing protocol.
 
-First, let's look into what peer-to-peer networks are before understanding how BitTorrent operates. 
+First, let's look into what peer-to-peer networks are before understanding how BitTorrent operates.
 
 Video presentation : https://www.youtube.com/watch?v=8sTttjDmNbk
 
@@ -75,7 +74,7 @@ The developers providing the linux iso image who have the full file will be call
 ### Leechers
 The peers without a complete copy of the file are known as leechers. Leechers will get the list of peers from the tracker which have the pieces that the leecher requires. The leecher then downloads the required piece from one of those peers. A leecher can also distribute the pieces that it has completed downloading even before it completes downloading the whole file. Once a Leecher has all the pieces it is called as seeder. As a leecher receives the ‘pieces’ it validates them against the hashes present in the meta info file.
 
-Any user downloading the file through BitTorrent will be called as a leecher, once they have a full file they can be called as seeders. 
+Any user downloading the file through BitTorrent will be called as a leecher, once they have a full file they can be called as seeders.
 
 BitTorrent uses piece selection algorithm to decide which piece to download with the goal of achieving maximum piece replication.
 
@@ -118,7 +117,7 @@ To decide which peers to choke/unchoke is decided by the following methods.
 Apart from the 4 unchoked peers, an additional unchoke is allowed which does not depend on the download rate. These are called optimistic unchokes and are selected randomly every 30 seconds.
 
 This is done to find unused connections which can be better than the current unchokes.
-Unused connections can be caused die to various reasons, such as when a new peer has joined the swarm so it still hasn’t uploaded any pieces. 
+Unused connections can be caused die to various reasons, such as when a new peer has joined the swarm so it still hasn’t uploaded any pieces.
 
 ### Anti-snubbing
 Sometimes a peer gets choked by all of its peers. If a peer has not received anything in the last 60 seconds it presumes it has been ‘snubbed’. As per tit-for-tat, it will choke the peers from which it isn’t receiving anything, except as a an optimistic unchoke. Following this, as an exception to the rule, the peer will generally open more than one optimistic unchoke. This allows the peer to find better connections quicker than just relying on being optimistically unchoked.

@@ -1,6 +1,5 @@
 ---
 title: "VPS setup"
-description: ""
 tags: [
     "openvpn",
     "pihole",

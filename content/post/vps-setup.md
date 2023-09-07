@@ -13,13 +13,13 @@ summary: "Setup for my VPS instance that I use for VPN / Torrents. Documenting i
 
 # Initial server setup
 
-- Steps to take to setup user and firewall on a new server instance
+Before installing specific software it's recomended to perform some initial server setup steps like user and firewall setup to ensure a secure environment.
 
 - [Detailed steps](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-22-04)
 
 # Vim
 
-- Better than nano
+The server might come with Nano for text editing, but as everyone knows Vim is the best text editor.
 
 ```
 sudo apt update
@@ -27,6 +27,8 @@ sudo apt -y install vim
 ```
 
 # Oh My Zsh
+
+The out of the box command-line experience is boring. Oh My Zsh is a shell framework that enhances it.
 
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -36,7 +38,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 # Nginx
 
-- To map subdomains to ports
+Use Nginx as a reverse proxy to map subdomains to ports
 
 - Install nginx
 
@@ -104,7 +106,7 @@ server {
 
 # Lets Encrypt
 
-- Free TLS/SSL certificates
+Like a vacine against hackers. Secure your website with free TLS/SSL certificates from Let's Encrypt.
 
 - Install certbot
 
@@ -122,13 +124,13 @@ sudo certbot --nginx -d example.com -d www.example.com
 
 # OpenVPN + Pi-hole
 
-- VPN with built in adblocker
+Steps for setting up a VPN with built-in adblocking using OpenVPN and Pi-hole
 
 - [Detailed steps](https://docs.pi-hole.net/guides/vpn/openvpn/installation/)
 
 # Transmission
 
-- Torrents ♥
+Torrent client on the server ♥
 
 - Install
 
@@ -164,7 +166,7 @@ sudo service transmission-daemon start
 
 # Filebrowser
 
-- View files on the server via browser
+Manage and view files on your server through a web interface
 
 ```
 curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash

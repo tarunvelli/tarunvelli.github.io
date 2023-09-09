@@ -1,6 +1,6 @@
 ---
 title: "Rails tabler template"
-summary: "Saas starter boilerplate to quickly build MVPs"
+summary: "Freea and open source starter kit designed to streamline the development of web applications using the Ruby on Rails framework"
 repo: "https://github.com/tarunvelli/rails-tabler-starter"
 tags: [
     "rails",

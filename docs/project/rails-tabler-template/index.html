@@ -59,13 +59,13 @@
           ·
         </span>
         <span>
-          353 words
+          752 words
         </span>
         <span class="split">
           ·
         </span>
         <span>
-          2 minute read
+          4 minute read
         </span>
     </div>
 
@@ -77,57 +77,62 @@
       <p>Rails starter boilerplate that you can clone and build on top of</p>
 <p><a href="https://rails-tabler.fly.dev" target="_blank" rel="noopener">Click here</a> to view demo application</p>
 <p><a href="https://github.com/tarunvelli/rails-tabler-starter" target="_blank" rel="noopener">Github</a></p>
-<h2 id="overview">Overview <a href="#overview" class="anchor">🔗</a></h2><ul>
-<li>
-<p>User authentication &amp; authorization</p>
-<ul>
-<li>Authentication through <a href="https://github.com/heartcombo/devise" target="_blank" rel="noopener">Devise</a></li>
-<li>Use <a href="https://github.com/heartcombo/devise/wiki/OmniAuth%3A-Overview" target="_blank" rel="noopener">OmniAuth</a> to extend authentication using providers</li>
-<li>Authorization thought <a href="https://github.com/varvet/pundit" target="_blank" rel="noopener">Pundit</a></li>
-</ul>
-</li>
-<li>
-<p>Background worker &amp; scheduler</p>
-<ul>
-<li>Using <a href="https://github.com/mperham/sidekiq/" target="_blank" rel="noopener">sidekiq</a> and <a href="https://github.com/sidekiq-scheduler/sidekiq-scheduler" target="_blank" rel="noopener">sidekiq-scheduler</a></li>
-</ul>
-</li>
-<li>
-<p>Role management</p>
-<ul>
-<li>Supports standard roles available across spaces and also creating custom roles per space</li>
-<li>Supports fine grained permissions per role</li>
-</ul>
-</li>
-<li>
-<p>Multiple user groups support</p>
-<ul>
-<li>The <code>Space</code> model is used to represent a group i.e. can be a team, organization, group etc.</li>
-<li>Example use case for turning on multi-space mode is a saas application</li>
-<li>Example use case for turning off multi-space mode is an internal org tool</li>
-</ul>
-</li>
-<li>
-<p>Pre built UI layouts</p>
-<ul>
-<li>High quality UI elements and layouts from <a href="https://tabler.io/" target="_blank" rel="noopener">Tabler</a></li>
-</ul>
-</li>
-<li>
-<p>Development focussed</p>
-<ul>
-<li><a href="https://github.com/ctran/annotate_models" target="_blank" rel="noopener">Annotate</a> - Annotate Rails classes with schema and routes info</li>
-<li><a href="https://github.com/presidentbeef/brakeman" target="_blank" rel="noopener">Brakeman</a> - A static analysis security vulnerability scanner</li>
-<li><a href="https://github.com/deivid-rodriguez/byebug" target="_blank" rel="noopener">Byebug</a> - Simple debugger</li>
-<li><a href="https://github.com/bkeepers/dotenv" target="_blank" rel="noopener">Dotenv</a> - Load environment variables from <code>.env</code></li>
-</ul>
-</li>
-</ul>
 <h2 id="goals">Goals <a href="#goals" class="anchor">🔗</a></h2><p>Users familiar with rails should be able to build with this boilerplate without requiring extensive introduction.</p>
 <ul>
 <li>No DSL</li>
 <li>Avoid complex frontend functionality</li>
 <li>Simplicity over efficiency</li>
+</ul>
+<h2 id="overview">Overview <a href="#overview" class="anchor">🔗</a></h2><h3 id="baked-in-foundational-models">Baked in foundational models <a href="#baked-in-foundational-models" class="anchor">🔗</a></h3><p>When developing a robust web application, it&rsquo;s crucial to have a well-structured data model. This template includes multiple pre-built models that you can leverage to accelerate your project. Here are some of the key models you&rsquo;ll find:</p>
+<ul>
+<li>
+<p>Users</p>
+<p>Your application&rsquo;s user base is at its core. With the User model, you can efficiently manage user registration, profiles, and authentication.</p>
+</li>
+<li>
+<p>Roles</p>
+<p>Roles play a pivotal role in defining user permissions and responsibilities within your application. Whether you have admins, moderators, or regular users, role management simplifies access control.</p>
+</li>
+<li>
+<p>Plans</p>
+<p>If your application offers various subscription plans with differing features and pricing, the Plans model is your go-to. It can store plan details and help users choose the subscription that suits them best.</p>
+</li>
+<li>
+<p>Subscriptions</p>
+<p>To handle user subscriptions, the Subscriptions model tracks subscription deatils, plan information, and renewal dates, making subscription management a breeze.</p>
+</li>
+</ul>
+<h3 id="user-authentication--authorization">User authentication &amp; authorization <a href="#user-authentication--authorization" class="anchor">🔗</a></h3><ul>
+<li>
+<p>Authentication through <a href="https://github.com/heartcombo/devise" target="_blank" rel="noopener">Devise</a></p>
+<p>Devise, a widely-used authentication gem for Rails, offers ready-made components for user registration, login, and password recovery, ensuring a secure user experience.</p>
+</li>
+<li>
+<p><a href="https://github.com/heartcombo/devise/wiki/OmniAuth%3A-Overview" target="_blank" rel="noopener">OmniAuth</a> for Third-Party Authentication</p>
+<p>Take your authentication capabilities to the next level by integrating OmniAuth. This allows users to log in using their social media or other online accounts, enhancing user convenience.</p>
+</li>
+<li>
+<p>Authorization with <a href="https://github.com/varvet/pundit" target="_blank" rel="noopener">Pundit</a></p>
+<p>Pundit simplifies role-based authorization in Rails. Define policies to control access to specific resources or actions based on user roles, strengthening your application&rsquo;s security.</p>
+</li>
+</ul>
+<h3 id="background-worker--scheduler">Background worker &amp; scheduler <a href="#background-worker--scheduler" class="anchor">🔗</a></h3><p>Efficiently handle background tasks and job scheduling with the built-in support for Sidekiq and Sidekiq Scheduler. These tools ensure that resource-intensive tasks don&rsquo;t hinder your application&rsquo;s performance, enhancing overall user experience.</p>
+<ul>
+<li><a href="https://github.com/mperham/sidekiq/" target="_blank" rel="noopener">sidekiq</a></li>
+<li><a href="https://github.com/sidekiq-scheduler/sidekiq-scheduler" target="_blank" rel="noopener">sidekiq-scheduler</a></li>
+</ul>
+<h3 id="role-management">Role management <a href="#role-management" class="anchor">🔗</a></h3><p>Effective role management is critical for applications with diverse user privileges. Supports standard roles available across spaces while also allowing you to create custom roles specific to each space. Fine-grained permissions per role ensure precise control over user access.</p>
+<h3 id="multiple-user-groups-support">Multiple user groups support <a href="#multiple-user-groups-support" class="anchor">🔗</a></h3><p>Introduces the concept of a &ldquo;Space&rdquo; model to represent user groups, which can be teams, organizations, or any other namespace. You have the flexibility to enable or disable multi-space mode, making it suitable for various use cases:</p>
+<ul>
+<li>Example use case for turning on multi-space mode: Saas applications where multiple groups require separate spaces.</li>
+<li>Example use case for turning off multi-space mode: Internal organizational tools where only admins can invite users and create spaces.</li>
+</ul>
+<h3 id="pre-built-ui-layouts">Pre built UI layouts <a href="#pre-built-ui-layouts" class="anchor">🔗</a></h3><p>A well-designed user interface is key to providing an excellent user experience. The Starter Kit integrates high-quality UI elements and layouts from <a href="https://tabler.io/" target="_blank" rel="noopener">Tabler</a>, allowing you to create a professional and polished appearance with ease.</p>
+<h3 id="development-focussed">Development focussed <a href="#development-focussed" class="anchor">🔗</a></h3><ul>
+<li><a href="https://github.com/ctran/annotate_models" target="_blank" rel="noopener">Annotate</a> - Annotate Rails classes with schema and routes information for improved code documentation.</li>
+<li><a href="https://github.com/presidentbeef/brakeman" target="_blank" rel="noopener">Brakeman</a> - Static analysis security vulnerability scanner to identify potential security risks in your code.</li>
+<li><a href="https://github.com/deivid-rodriguez/byebug" target="_blank" rel="noopener">Byebug</a> - Straightforward debugger for troubleshooting issues during development</li>
+<li><a href="https://github.com/bkeepers/dotenv" target="_blank" rel="noopener">Dotenv</a> - Simplify environment variable management by loading them from a .env file.</li>
 </ul>
 <h2 id="setup">Setup <a href="#setup" class="anchor">🔗</a></h2><p>requires postgres and redis to run on local</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>brew install postgresql@12 redis
@@ -189,8 +194,30 @@
 </ul>
 </li>
 </ul>
-<h2 id="deployment">Deployment <a href="#deployment" class="anchor">🔗</a></h2><p>TODO: instructions to deploy on fly.io etc.</p>
-<h2 id="contribution">Contribution <a href="#contribution" class="anchor">🔗</a></h2><p>Contribution is welcome!</p>
+<h3 id="sample-settings-for-different-use-cases">Sample settings for different use cases <a href="#sample-settings-for-different-use-cases" class="anchor">🔗</a></h3><p>Here are sample configurations for two different application types:</p>
+<ul>
+<li>Saas App</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>AppSettings.interface_layout = &#39;HORIZONTAL&#39;
+</span></span><span style="display:flex;"><span>AppSettings.interface_mode = &#39;LIGHT&#39;
+</span></span><span style="display:flex;"><span>AppSettings.interface_theme = &#39;DEFAULT&#39;
+</span></span><span style="display:flex;"><span>AppSettings.login_layout = &#39;ILLUSTRATION&#39;
+</span></span><span style="display:flex;"><span>AppSettings.multi_space_mode = true
+</span></span><span style="display:flex;"><span>AppSettings.show_landing_page = true
+</span></span></code></pre></div><ul>
+<li>Internal App</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>AppSettings.interface_layout = &#39;CONDENSED&#39;
+</span></span><span style="display:flex;"><span>AppSettings.interface_mode = &#39;LIGHT&#39;
+</span></span><span style="display:flex;"><span>AppSettings.interface_theme = &#39;DEFAULT&#39;
+</span></span><span style="display:flex;"><span>AppSettings.login_layout = &#39;DEFAULT&#39;
+</span></span><span style="display:flex;"><span>AppSettings.multi_space_mode = false
+</span></span><span style="display:flex;"><span>AppSettings.show_landing_page = false
+</span></span></code></pre></div><h2 id="deployment">Deployment <a href="#deployment" class="anchor">🔗</a></h2><ul>
+<li>Deploy on <a href="https://fly.io/docs/rails/getting-started/" target="_blank" rel="noopener">Fly.io</a></li>
+<li>Deploy on <a href="https://devcenter.heroku.com/articles/getting-started-with-rails7" target="_blank" rel="noopener">Heroku</a></li>
+</ul>
+<p>Happy coding!</p>
 
     </div>
 

@@ -59,7 +59,7 @@
           ·
         </span>
         <span>
-          348 words
+          362 words
         </span>
         <span class="split">
           ·
@@ -82,21 +82,24 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo apt update
 </span></span><span style="display:flex;"><span>sudo apt -y install vim
 </span></span></code></pre></div><h1 id="oh-my-zsh">Oh My Zsh <a href="#oh-my-zsh" class="anchor">🔗</a></h1><p>The out of the box command-line experience is boring. Oh My Zsh is a shell framework that enhances it.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sh -c &#34;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&#34;
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo apt -y install zsh
+</span></span><span style="display:flex;"><span>sh -c &#34;$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&#34;
 </span></span></code></pre></div><ul>
 <li><a href="https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes#oxide" target="_blank" rel="noopener">Oxide theme</a></li>
 </ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cd ~/.oh-my-zsh/themes
+</span></span><span style="display:flex;"><span>curl -O https://raw.githubusercontent.com/dikiaap/dotfiles/master/.oh-my-zsh/themes/oxide.zsh-theme
+</span></span></code></pre></div><p>open .zshrc in vim and change theme to oxide</p>
 <h1 id="nginx">Nginx <a href="#nginx" class="anchor">🔗</a></h1><p>Use Nginx as a reverse proxy to map subdomains to ports</p>
 <ul>
 <li>Install nginx</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo apt update
-</span></span><span style="display:flex;"><span>sudo apt install nginx
+</span></span><span style="display:flex;"><span>sudo apt -y install nginx
 </span></span></code></pre></div><ul>
 <li>Allow through firewall</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo ufw allow &#39;Nginx Full&#39;
-</span></span><span style="display:flex;"><span>sudo ufw delete allow &#39;Nginx HTTP&#39;
 </span></span></code></pre></div><ul>
 <li>Server block without TLS/SSL</li>
 </ul>

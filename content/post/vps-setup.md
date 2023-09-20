@@ -31,10 +31,18 @@ sudo apt -y install vim
 The out of the box command-line experience is boring. Oh My Zsh is a shell framework that enhances it.
 
 ```
+sudo apt -y install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 - [Oxide theme](https://github.com/ohmyzsh/ohmyzsh/wiki/External-themes#oxide)
+
+```
+cd ~/.oh-my-zsh/themes
+curl -O https://raw.githubusercontent.com/dikiaap/dotfiles/master/.oh-my-zsh/themes/oxide.zsh-theme
+```
+
+open .zshrc in vim and change theme to oxide
 
 # Nginx
 
@@ -44,14 +52,13 @@ Use Nginx as a reverse proxy to map subdomains to ports
 
 ```
 sudo apt update
-sudo apt install nginx
+sudo apt -y install nginx
 ```
 
 - Allow through firewall
 
 ```
 sudo ufw allow 'Nginx Full'
-sudo ufw delete allow 'Nginx HTTP'
 ```
 
 -  Server block without TLS/SSL

@@ -59,7 +59,7 @@
           ·
         </span>
         <span>
-          362 words
+          408 words
         </span>
         <span class="split">
           ·
@@ -90,6 +90,62 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cd ~/.oh-my-zsh/themes
 </span></span><span style="display:flex;"><span>curl -O https://raw.githubusercontent.com/dikiaap/dotfiles/master/.oh-my-zsh/themes/oxide.zsh-theme
 </span></span></code></pre></div><p>open .zshrc in vim and change theme to oxide</p>
+<h1 id="openvpn--pi-hole">OpenVPN + Pi-hole <a href="#openvpn--pi-hole" class="anchor">🔗</a></h1><p>Steps for setting up a VPN with built-in adblocking using OpenVPN and Pi-hole</p>
+<ul>
+<li><a href="https://docs.pi-hole.net/guides/vpn/openvpn/installation/" target="_blank" rel="noopener">Detailed steps</a></li>
+</ul>
+<h1 id="transmission">Transmission <a href="#transmission" class="anchor">🔗</a></h1><p>Torrent client on the server ♥</p>
+<ul>
+<li>Install</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo add-apt-repository ppa:transmissionbt/ppa
+</span></span><span style="display:flex;"><span>sudo apt-get update
+</span></span><span style="display:flex;"><span>sudo apt-get install transmission-cli transmission-common transmission-daemon
+</span></span></code></pre></div><ul>
+<li>Configure</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo service transmission-daemon stop
+</span></span><span style="display:flex;"><span>sudo vim /var/lib/transmission-daemon/info/settings.json
+</span></span></code></pre></div><ul>
+<li>Change the following</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&#34;rpc-password&#34;: &#34;&lt;new password&gt;&#34;,
+</span></span><span style="display:flex;"><span>&#34;rpc-username&#34;: &#34;&lt;new username&gt;&#34;,
+</span></span><span style="display:flex;"><span>&#34;rpc-whitelist-enabled&#34;: false,
+</span></span><span style="display:flex;"><span>&#34;umask&#34;: 2,
+</span></span></code></pre></div><ul>
+<li>Restart</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo service transmission-daemon start
+</span></span></code></pre></div><ul>
+<li><a href="https://help.ubuntu.com/community/TransmissionHowTo" target="_blank" rel="noopener">Detailed steps</a></li>
+</ul>
+<h1 id="filebrowser">Filebrowser <a href="#filebrowser" class="anchor">🔗</a></h1><p>Manage and view files on your server through a web interface</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
+</span></span><span style="display:flex;"><span>filebrowser -r /path/to/your/files
+</span></span></code></pre></div><p>Create service file</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mkdir -p ~/.config/systemd/user
+</span></span><span style="display:flex;"><span>vim ~/.config/systemd/user/filebrowser.service
+</span></span></code></pre></div><p>Define service</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># ~/.config/systemd/user/filebrowser.service
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Unit]
+</span></span><span style="display:flex;"><span>Description=Filebrowser
+</span></span><span style="display:flex;"><span>After=network-online.target
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Service]
+</span></span><span style="display:flex;"><span>ExecStart=/usr/local/bin/filebrowser -r /var/lib/transmission-daemon/downloads/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Install]
+</span></span><span style="display:flex;"><span># Here must be `default.target`, the service otherwise won&#39;t start on boot
+</span></span><span style="display:flex;"><span>WantedBy=default.target
+</span></span></code></pre></div><p>Run service</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>systemctl --user daemon-reload
+</span></span><span style="display:flex;"><span>systemctl --user start filebrowser.service
+</span></span><span style="display:flex;"><span>systemctl --user enable filebrowser.service
+</span></span></code></pre></div><ul>
+<li><a href="https://filebrowser.org/installation" target="_blank" rel="noopener">Detailed steps</a></li>
+</ul>
 <h1 id="nginx">Nginx <a href="#nginx" class="anchor">🔗</a></h1><p>Use Nginx as a reverse proxy to map subdomains to ports</p>
 <ul>
 <li>Install nginx</li>
@@ -158,42 +214,6 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo certbot --nginx -d example.com -d www.example.com
 </span></span></code></pre></div><ul>
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04" target="_blank" rel="noopener">Detailed steps</a></li>
-</ul>
-<h1 id="openvpn--pi-hole">OpenVPN + Pi-hole <a href="#openvpn--pi-hole" class="anchor">🔗</a></h1><p>Steps for setting up a VPN with built-in adblocking using OpenVPN and Pi-hole</p>
-<ul>
-<li><a href="https://docs.pi-hole.net/guides/vpn/openvpn/installation/" target="_blank" rel="noopener">Detailed steps</a></li>
-</ul>
-<h1 id="transmission">Transmission <a href="#transmission" class="anchor">🔗</a></h1><p>Torrent client on the server ♥</p>
-<ul>
-<li>Install</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo add-apt-repository ppa:transmissionbt/ppa
-</span></span><span style="display:flex;"><span>sudo apt-get update
-</span></span><span style="display:flex;"><span>sudo apt-get install transmission-cli transmission-common transmission-daemon
-</span></span></code></pre></div><ul>
-<li>Configure</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo service transmission-daemon stop
-</span></span><span style="display:flex;"><span>sudo vim /var/lib/transmission-daemon/info/settings.json
-</span></span></code></pre></div><ul>
-<li>Change the following</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&#34;rpc-password&#34;: &#34;&lt;new password&gt;&#34;,
-</span></span><span style="display:flex;"><span>&#34;rpc-username&#34;: &#34;&lt;new username&gt;&#34;,
-</span></span><span style="display:flex;"><span>&#34;rpc-whitelist&#34;: &#34;127.0.0.1,192.168.*.*&#34;,
-</span></span><span style="display:flex;"><span>&#34;umask&#34;: 2,
-</span></span></code></pre></div><ul>
-<li>Restart</li>
-</ul>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo service transmission-daemon start
-</span></span></code></pre></div><ul>
-<li><a href="https://help.ubuntu.com/community/TransmissionHowTo" target="_blank" rel="noopener">Detailed steps</a></li>
-</ul>
-<h1 id="filebrowser">Filebrowser <a href="#filebrowser" class="anchor">🔗</a></h1><p>Manage and view files on your server through a web interface</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
-</span></span><span style="display:flex;"><span>filebrowser -r /path/to/your/files
-</span></span></code></pre></div><ul>
-<li><a href="https://filebrowser.org/installation" target="_blank" rel="noopener">Detailed steps</a></li>
 </ul>
 
     </div>

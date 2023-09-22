@@ -44,6 +44,91 @@ curl -O https://raw.githubusercontent.com/dikiaap/dotfiles/master/.oh-my-zsh/the
 
 open .zshrc in vim and change theme to oxide
 
+# OpenVPN + Pi-hole
+
+Steps for setting up a VPN with built-in adblocking using OpenVPN and Pi-hole
+
+- [Detailed steps](https://docs.pi-hole.net/guides/vpn/openvpn/installation/)
+
+# Transmission
+
+Torrent client on the server ♥
+
+- Install
+
+```
+sudo add-apt-repository ppa:transmissionbt/ppa
+sudo apt-get update
+sudo apt-get install transmission-cli transmission-common transmission-daemon
+```
+
+- Configure
+
+```
+sudo service transmission-daemon stop
+sudo vim /var/lib/transmission-daemon/info/settings.json
+```
+
+- Change the following
+
+```
+"rpc-password": "<new password>",
+"rpc-username": "<new username>",
+"rpc-whitelist-enabled": false,
+"umask": 2,
+```
+
+- Restart
+
+```
+sudo service transmission-daemon start
+```
+
+- [Detailed steps](https://help.ubuntu.com/community/TransmissionHowTo)
+
+# Filebrowser
+
+Manage and view files on your server through a web interface
+
+```
+curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
+filebrowser -r /path/to/your/files
+```
+
+Create service file
+
+```
+mkdir -p ~/.config/systemd/user
+vim ~/.config/systemd/user/filebrowser.service
+```
+
+Define service
+
+```
+# ~/.config/systemd/user/filebrowser.service
+
+[Unit]
+Description=Filebrowser
+After=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/filebrowser -r /var/lib/transmission-daemon/downloads/
+
+[Install]
+# Here must be `default.target`, the service otherwise won't start on boot
+WantedBy=default.target
+```
+
+Run service
+
+```
+systemctl --user daemon-reload
+systemctl --user start filebrowser.service
+systemctl --user enable filebrowser.service
+```
+
+- [Detailed steps](https://filebrowser.org/installation)
+
 # Nginx
 
 Use Nginx as a reverse proxy to map subdomains to ports
@@ -128,56 +213,3 @@ sudo certbot --nginx -d example.com -d www.example.com
 ```
 
 - [Detailed steps](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04)
-
-# OpenVPN + Pi-hole
-
-Steps for setting up a VPN with built-in adblocking using OpenVPN and Pi-hole
-
-- [Detailed steps](https://docs.pi-hole.net/guides/vpn/openvpn/installation/)
-
-# Transmission
-
-Torrent client on the server ♥
-
-- Install
-
-```
-sudo add-apt-repository ppa:transmissionbt/ppa
-sudo apt-get update
-sudo apt-get install transmission-cli transmission-common transmission-daemon
-```
-
-- Configure
-
-```
-sudo service transmission-daemon stop
-sudo vim /var/lib/transmission-daemon/info/settings.json
-```
-
-- Change the following
-
-```
-"rpc-password": "<new password>",
-"rpc-username": "<new username>",
-"rpc-whitelist": "127.0.0.1,192.168.*.*",
-"umask": 2,
-```
-
-- Restart
-
-```
-sudo service transmission-daemon start
-```
-
-- [Detailed steps](https://help.ubuntu.com/community/TransmissionHowTo)
-
-# Filebrowser
-
-Manage and view files on your server through a web interface
-
-```
-curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
-filebrowser -r /path/to/your/files
-```
-
-- [Detailed steps](https://filebrowser.org/installation)

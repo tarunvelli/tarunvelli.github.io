@@ -9,9 +9,13 @@ tags: [
 date: "2020-07-18"
 ---
 
+<center>Whatsapp chatbot to place and manage orders</center>
+
 ![ordbot](/assets/ordbot.gif)
 
-[Github](https://github.com/tarunvelli/ordbot)
+<center>
+  <a href="https://github.com/tarunvelli/ordbot" target="_blank" rel="noopener noreferrer">Github</a>
+</center>
 
 # Installation
 

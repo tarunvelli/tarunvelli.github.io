@@ -1,6 +1,6 @@
 ---
 title: "Rails tabler template"
-summary: "Freea and open source starter kit designed to streamline the development of web applications using the Ruby on Rails framework"
+summary: "Free and open source starter kit designed to streamline the development of web applications using the Ruby on Rails framework"
 repo: "https://github.com/tarunvelli/rails-tabler-starter"
 tags: [
     "rails",
@@ -10,11 +10,14 @@ tags: [
 date: "2022-10-26"
 ---
 
-Rails starter boilerplate that you can clone and build on top of
+<center>Rails starter boilerplate that you can clone and build on top of</center>
 
-[Click here](https://rails-tabler.fly.dev) to view demo application
+![rails-tabler](/assets/rails-tabler.gif)
 
-[Github](https://github.com/tarunvelli/rails-tabler-starter)
+<center>
+    <a href="https://rails-tabler.fly.dev" target="_blank" rel="noopener noreferrer">Demo</a> |
+    <a href="https://github.com/tarunvelli/rails-tabler-starter" target="_blank" rel="noopener noreferrer">Github</a>
+</center>
 
 ## Goals
 

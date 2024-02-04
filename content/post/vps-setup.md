@@ -99,32 +99,31 @@ Create service file
 
 ```
 mkdir -p ~/.config/systemd/user
-vim ~/.config/systemd/user/filebrowser.service
+sudo vim /etc/systemd/system/filebrowser.service
 ```
 
 Define service
 
 ```
-# ~/.config/systemd/user/filebrowser.service
-
 [Unit]
-Description=Filebrowser
-After=network-online.target
+Description=File Browser Service
+After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/filebrowser -r /var/lib/transmission-daemon/downloads/
+Type=simple
+Restart=on-failure
+RestartSec=5s
+ExecStart=filebrowser -r /var/lib/transmission-daemon/downloads/
 
 [Install]
-# Here must be `default.target`, the service otherwise won't start on boot
-WantedBy=default.target
+WantedBy=multi-user.target
 ```
 
 Run service
 
 ```
-systemctl --user daemon-reload
-systemctl --user start filebrowser.service
-systemctl --user enable filebrowser.service
+sudo systemctl start filebrowser.service
+sudo systemctl enable filebrowser.service
 ```
 
 - [Detailed steps](https://filebrowser.org/installation)

@@ -59,7 +59,7 @@
           ·
         </span>
         <span>
-          408 words
+          397 words
         </span>
         <span class="split">
           ·
@@ -125,24 +125,23 @@
 </span></span><span style="display:flex;"><span>filebrowser -r /path/to/your/files
 </span></span></code></pre></div><p>Create service file</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mkdir -p ~/.config/systemd/user
-</span></span><span style="display:flex;"><span>vim ~/.config/systemd/user/filebrowser.service
+</span></span><span style="display:flex;"><span>sudo vim /etc/systemd/system/filebrowser.service
 </span></span></code></pre></div><p>Define service</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># ~/.config/systemd/user/filebrowser.service
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>[Unit]
-</span></span><span style="display:flex;"><span>Description=Filebrowser
-</span></span><span style="display:flex;"><span>After=network-online.target
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>[Unit]
+</span></span><span style="display:flex;"><span>Description=File Browser Service
+</span></span><span style="display:flex;"><span>After=network.target
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>[Service]
-</span></span><span style="display:flex;"><span>ExecStart=/usr/local/bin/filebrowser -r /var/lib/transmission-daemon/downloads/
+</span></span><span style="display:flex;"><span>Type=simple
+</span></span><span style="display:flex;"><span>Restart=on-failure
+</span></span><span style="display:flex;"><span>RestartSec=5s
+</span></span><span style="display:flex;"><span>ExecStart=filebrowser -r /var/lib/transmission-daemon/downloads/
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>[Install]
-</span></span><span style="display:flex;"><span># Here must be `default.target`, the service otherwise won&#39;t start on boot
-</span></span><span style="display:flex;"><span>WantedBy=default.target
+</span></span><span style="display:flex;"><span>WantedBy=multi-user.target
 </span></span></code></pre></div><p>Run service</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>systemctl --user daemon-reload
-</span></span><span style="display:flex;"><span>systemctl --user start filebrowser.service
-</span></span><span style="display:flex;"><span>systemctl --user enable filebrowser.service
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo systemctl start filebrowser.service
+</span></span><span style="display:flex;"><span>sudo systemctl enable filebrowser.service
 </span></span></code></pre></div><ul>
 <li><a href="https://filebrowser.org/installation" target="_blank" rel="noopener">Detailed steps</a></li>
 </ul>

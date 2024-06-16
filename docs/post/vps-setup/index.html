@@ -4,14 +4,12 @@
     <title>VPS setup | Tarun Vellishetty</title>
 
     <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width,minimum-scale=1">
 <meta name="description" content="Setup for my VPS instance that I use for VPN / Torrents. Documenting it so that I can re-setup if it gets wrecked.">
 <meta name="generator" content="Hugo 0.108.0">
 
-
-  <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
-
+<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
 
 <link rel="stylesheet" href="/css/style.css">
 
@@ -59,13 +57,13 @@
           ·
         </span>
         <span>
-          397 words
+          487 words
         </span>
         <span class="split">
           ·
         </span>
         <span>
-          2 minute read
+          3 minute read
         </span>
     </div>
 
@@ -144,6 +142,34 @@
 </span></span><span style="display:flex;"><span>sudo systemctl enable filebrowser.service
 </span></span></code></pre></div><ul>
 <li><a href="https://filebrowser.org/installation" target="_blank" rel="noopener">Detailed steps</a></li>
+</ul>
+<h1 id="sterling-pdf">Sterling PDF <a href="#sterling-pdf" class="anchor">🔗</a></h1><p>Web based PDF editor so that I can manage PDFs from anywhere</p>
+<p><a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository" target="_blank" rel="noopener">Install docker &amp; docker compose</a></p>
+<p>Create a directory and a compose.yml file within it</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cd ~
+</span></span><span style="display:flex;"><span>mkdir stirling-pdf
+</span></span><span style="display:flex;"><span>cd stirling-pdf
+</span></span><span style="display:flex;"><span>vim compose.yml
+</span></span></code></pre></div><p>Paste the below into the docker compose file</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>version: &#39;3.3&#39;
+</span></span><span style="display:flex;"><span>services:
+</span></span><span style="display:flex;"><span>  stirling-pdf:
+</span></span><span style="display:flex;"><span>    image: frooodle/s-pdf:latest
+</span></span><span style="display:flex;"><span>    ports:
+</span></span><span style="display:flex;"><span>      - &#39;8080:8080&#39;
+</span></span><span style="display:flex;"><span>    volumes:
+</span></span><span style="display:flex;"><span>      - /location/of/trainingData:/usr/share/tessdata #Required for extra OCR languages
+</span></span><span style="display:flex;"><span>      - /location/of/extraConfigs:/configs
+</span></span><span style="display:flex;"><span>#      - /location/of/customFiles:/customFiles/
+</span></span><span style="display:flex;"><span>#      - /location/of/logs:/logs/
+</span></span><span style="display:flex;"><span>    environment:
+</span></span><span style="display:flex;"><span>      - DOCKER_ENABLE_SECURITY=false
+</span></span><span style="display:flex;"><span>      - INSTALL_BOOK_AND_ADVANCED_HTML_OPS=false
+</span></span><span style="display:flex;"><span>      - LANGS=en_GB
+</span></span></code></pre></div><p>Run docker compose up in detached mode</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo docker compose up -d
+</span></span></code></pre></div><ul>
+<li><a href="https://github.com/Stirling-Tools/Stirling-PDF?tab=readme-ov-file#how-to-use" target="_blank" rel="noopener">Detailed steps</a></li>
 </ul>
 <h1 id="nginx">Nginx <a href="#nginx" class="anchor">🔗</a></h1><p>Use Nginx as a reverse proxy to map subdomains to ports</p>
 <ul>

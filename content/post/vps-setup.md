@@ -128,6 +128,49 @@ sudo systemctl enable filebrowser.service
 
 - [Detailed steps](https://filebrowser.org/installation)
 
+# Sterling PDF
+
+Web based PDF editor so that I can manage PDFs from anywhere
+
+[Install docker & docker compose](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
+
+Create a directory and a compose.yml file within it
+
+```
+cd ~
+mkdir stirling-pdf
+cd stirling-pdf
+vim compose.yml
+```
+
+Paste the below into the docker compose file
+
+```
+version: '3.3'
+services:
+  stirling-pdf:
+    image: frooodle/s-pdf:latest
+    ports:
+      - '8080:8080'
+    volumes:
+      - /location/of/trainingData:/usr/share/tessdata #Required for extra OCR languages
+      - /location/of/extraConfigs:/configs
+#      - /location/of/customFiles:/customFiles/
+#      - /location/of/logs:/logs/
+    environment:
+      - DOCKER_ENABLE_SECURITY=false
+      - INSTALL_BOOK_AND_ADVANCED_HTML_OPS=false
+      - LANGS=en_GB
+```
+
+Run docker compose up in detached mode
+
+```
+sudo docker compose up -d
+```
+
+- [Detailed steps](https://github.com/Stirling-Tools/Stirling-PDF?tab=readme-ov-file#how-to-use)
+
 # Nginx
 
 Use Nginx as a reverse proxy to map subdomains to ports

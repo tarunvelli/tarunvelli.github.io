@@ -2,6 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://tarunvelli.site/tags/llm/</loc>
+    <lastmod>2024-06-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tarunvelli.site/tags/nginx/</loc>
+    <lastmod>2024-06-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tarunvelli.site/tags/ollama/</loc>
+    <lastmod>2024-06-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tarunvelli.site/post/</loc>
+    <lastmod>2024-06-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tarunvelli.site/tags/self-hosting/</loc>
+    <lastmod>2024-06-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tarunvelli.site/post/self-hosted-ollama/</loc>
+    <lastmod>2024-06-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tarunvelli.site/tags/</loc>
+    <lastmod>2024-06-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tarunvelli.site/</loc>
+    <lastmod>2024-06-16T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://tarunvelli.site/tags/bittorrent/</loc>
     <lastmod>2023-07-22T00:00:00+00:00</lastmod>
   </url><url>
@@ -12,15 +36,6 @@
     <lastmod>2023-07-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tarunvelli.site/tags/pihole/</loc>
-    <lastmod>2023-07-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tarunvelli.site/post/</loc>
-    <lastmod>2023-07-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tarunvelli.site/tags/</loc>
-    <lastmod>2023-07-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tarunvelli.site/</loc>
     <lastmod>2023-07-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tarunvelli.site/tags/transmission/</loc>
@@ -43,6 +58,15 @@
   </url><url>
     <loc>https://tarunvelli.site/tags/template/</loc>
     <lastmod>2022-10-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tarunvelli.site/post/0ad-mauryan-strat/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tarunvelli.site/tags/rts/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tarunvelli.site/tags/video-game/</loc>
+    <lastmod>2021-09-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tarunvelli.site/project/ordbot/</loc>
     <lastmod>2020-07-18T00:00:00+00:00</lastmod>

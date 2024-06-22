@@ -6,7 +6,16 @@
     <description>Recent content on Tarun Vellishetty</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tarunvelli.site/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://tarunvelli.site/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Self-Hosting Ollama</title>
+      <link>https://tarunvelli.site/post/self-hosted-ollama/</link>
+      <pubDate>Sun, 16 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://tarunvelli.site/post/self-hosted-ollama/</guid>
+      <description>How to install and run Ollama from a self-hosted server or VPS</description>
+    </item>
+    
     <item>
       <title>VPS setup</title>
       <link>https://tarunvelli.site/post/vps-setup/</link>
@@ -23,6 +32,15 @@
       
       <guid>https://tarunvelli.site/project/rails-tabler-template/</guid>
       <description>Free and open source starter kit designed to streamline the development of web applications using the Ruby on Rails framework</description>
+    </item>
+    
+    <item>
+      <title>0 AD Mauryan Strategy</title>
+      <link>https://tarunvelli.site/post/0ad-mauryan-strat/</link>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://tarunvelli.site/post/0ad-mauryan-strat/</guid>
+      <description>Gameplay strategy for the Mauryan civilization in 0AD</description>
     </item>
     
     <item>

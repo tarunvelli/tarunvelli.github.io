@@ -5,7 +5,9 @@ tags: [
     "pihole",
     "transmission",
     "bittorrent",
-    "filebrowser"
+    "filebrowser",
+    "self-hosting",
+    "nginx"
 ]
 date: "2023-07-22"
 summary: "Setup for my VPS instance that I use for VPN / Torrents. Documenting it so that I can re-setup if it gets wrecked."

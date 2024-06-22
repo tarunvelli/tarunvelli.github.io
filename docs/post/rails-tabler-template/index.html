@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Rails tabler template | Tarun Vellishetty</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="Free and open source starter kit designed to streamline the development of web applications using the Ruby on Rails framework">
+<meta name="generator" content="Hugo 0.108.0">
+
+
+  <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+
+
+
+
+
+
+
+  </head>
+
+  <body>
+    <nav class="navigation">
+	
+		<a href="/"> <span class="arrow">←</span>Home</a>
+	
+
+	
+		<a href="/post">All posts</a>
+	
+	<a href="/tags">Tags</a>
+
+	
+	  <a class="button" href="https://tarunvelli.site/index.xml">Subscribe</a>
+	
+</nav>
+
+
+    <main class="main">
+      
+
+<section id="single">
+    <h1 class="title">Rails tabler template</h1>
+
+    <div class="tip">
+        <time datetime="2022-10-26 00:00:00 &#43;0000 UTC">Oct 26, 2022</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          748 words
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          4 minute read
+        </span>
+    </div>
+
+    
+    
+
+
+    <div class="content">
+      <center>Rails starter boilerplate that you can clone and build on top of</center>
+<p><p class="markdown-image">
+  <img src="/assets/rails-tabler.gif" alt="rails-tabler"  />
+</p></p>
+<center>
+    <a href="https://rails-tabler.fly.dev" target="_blank" rel="noopener noreferrer">Demo</a> |
+    <a href="https://github.com/tarunvelli/rails-tabler-starter" target="_blank" rel="noopener noreferrer">Github</a>
+</center>
+<h2 id="goals">Goals <a href="#goals" class="anchor">🔗</a></h2><p>Users familiar with rails should be able to build with this boilerplate without requiring extensive introduction.</p>
+<ul>
+<li>No DSL</li>
+<li>Avoid complex frontend functionality</li>
+<li>Simplicity over efficiency</li>
+</ul>
+<h2 id="overview">Overview <a href="#overview" class="anchor">🔗</a></h2><h3 id="baked-in-foundational-models">Baked in foundational models <a href="#baked-in-foundational-models" class="anchor">🔗</a></h3><p>When developing a robust web application, it&rsquo;s crucial to have a well-structured data model. This template includes multiple pre-built models that you can leverage to accelerate your project. Here are some of the key models you&rsquo;ll find:</p>
+<ul>
+<li>
+<p>Users</p>
+<p>Your application&rsquo;s user base is at its core. With the User model, you can efficiently manage user registration, profiles, and authentication.</p>
+</li>
+<li>
+<p>Roles</p>
+<p>Roles play a pivotal role in defining user permissions and responsibilities within your application. Whether you have admins, moderators, or regular users, role management simplifies access control.</p>
+</li>
+<li>
+<p>Plans</p>
+<p>If your application offers various subscription plans with differing features and pricing, the Plans model is your go-to. It can store plan details and help users choose the subscription that suits them best.</p>
+</li>
+<li>
+<p>Subscriptions</p>
+<p>To handle user subscriptions, the Subscriptions model tracks subscription deatils, plan information, and renewal dates, making subscription management a breeze.</p>
+</li>
+</ul>
+<h3 id="user-authentication--authorization">User authentication &amp; authorization <a href="#user-authentication--authorization" class="anchor">🔗</a></h3><ul>
+<li>
+<p>Authentication through <a href="https://github.com/heartcombo/devise" target="_blank" rel="noopener">Devise</a></p>
+<p>Devise, a widely-used authentication gem for Rails, offers ready-made components for user registration, login, and password recovery, ensuring a secure user experience.</p>
+</li>
+<li>
+<p><a href="https://github.com/heartcombo/devise/wiki/OmniAuth%3A-Overview" target="_blank" rel="noopener">OmniAuth</a> for Third-Party Authentication</p>
+<p>Take your authentication capabilities to the next level by integrating OmniAuth. This allows users to log in using their social media or other online accounts, enhancing user convenience.</p>
+</li>
+<li>
+<p>Authorization with <a href="https://github.com/varvet/pundit" target="_blank" rel="noopener">Pundit</a></p>
+<p>Pundit simplifies role-based authorization in Rails. Define policies to control access to specific resources or actions based on user roles, strengthening your application&rsquo;s security.</p>
+</li>
+</ul>
+<h3 id="background-worker--scheduler">Background worker &amp; scheduler <a href="#background-worker--scheduler" class="anchor">🔗</a></h3><p>Efficiently handle background tasks and job scheduling with the built-in support for Sidekiq and Sidekiq Scheduler. These tools ensure that resource-intensive tasks don&rsquo;t hinder your application&rsquo;s performance, enhancing overall user experience.</p>
+<ul>
+<li><a href="https://github.com/mperham/sidekiq/" target="_blank" rel="noopener">sidekiq</a></li>
+<li><a href="https://github.com/sidekiq-scheduler/sidekiq-scheduler" target="_blank" rel="noopener">sidekiq-scheduler</a></li>
+</ul>
+<h3 id="role-management">Role management <a href="#role-management" class="anchor">🔗</a></h3><p>Effective role management is critical for applications with diverse user privileges. Supports standard roles available across spaces while also allowing you to create custom roles specific to each space. Fine-grained permissions per role ensure precise control over user access.</p>
+<h3 id="multiple-user-groups-support">Multiple user groups support <a href="#multiple-user-groups-support" class="anchor">🔗</a></h3><p>Introduces the concept of a &ldquo;Space&rdquo; model to represent user groups, which can be teams, organizations, or any other namespace. You have the flexibility to enable or disable multi-space mode, making it suitable for various use cases:</p>
+<ul>
+<li>Example use case for turning on multi-space mode: Saas applications where multiple groups require separate spaces.</li>
+<li>Example use case for turning off multi-space mode: Internal organizational tools where only admins can invite users and create spaces.</li>
+</ul>
+<h3 id="pre-built-ui-layouts">Pre built UI layouts <a href="#pre-built-ui-layouts" class="anchor">🔗</a></h3><p>A well-designed user interface is key to providing an excellent user experience. The Starter Kit integrates high-quality UI elements and layouts from <a href="https://tabler.io/" target="_blank" rel="noopener">Tabler</a>, allowing you to create a professional and polished appearance with ease.</p>
+<h3 id="development-focussed">Development focussed <a href="#development-focussed" class="anchor">🔗</a></h3><ul>
+<li><a href="https://github.com/ctran/annotate_models" target="_blank" rel="noopener">Annotate</a> - Annotate Rails classes with schema and routes information for improved code documentation.</li>
+<li><a href="https://github.com/presidentbeef/brakeman" target="_blank" rel="noopener">Brakeman</a> - Static analysis security vulnerability scanner to identify potential security risks in your code.</li>
+<li><a href="https://github.com/deivid-rodriguez/byebug" target="_blank" rel="noopener">Byebug</a> - Straightforward debugger for troubleshooting issues during development</li>
+<li><a href="https://github.com/bkeepers/dotenv" target="_blank" rel="noopener">Dotenv</a> - Simplify environment variable management by loading them from a .env file.</li>
+</ul>
+<h2 id="setup">Setup <a href="#setup" class="anchor">🔗</a></h2><p>requires postgres and redis to run on local</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>brew install postgresql@12 redis
+</span></span></code></pre></div><p>clone the repo</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>git clone https://github.com/tarunvelli/rails-tabler-starter.git
+</span></span></code></pre></div><p>use asdf to install required dependencies, or setup the dependencies <code>.tool-versions</code> in another way</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>asdf install
+</span></span></code></pre></div><p>setup and run dev server</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>bin/setup
+</span></span><span style="display:flex;"><span>bin/dev
+</span></span></code></pre></div><p>Mark a user as admin from console to view admin features in the user dropdown</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>bundle exec rails c
+</span></span><span style="display:flex;"><span>&gt; User.first.update(admin: true)
+</span></span></code></pre></div><h2 id="appsettings">AppSettings <a href="#appsettings" class="anchor">🔗</a></h2><p>Toggle app settigns at <code>/setup/edit</code></p>
+<ul>
+<li>
+<p><code>AppSettings.interface_layout</code></p>
+<ul>
+<li>Layout of app</li>
+<li>values [&ldquo;VERTICAL&rdquo;, &ldquo;HORIZONTAL&rdquo;, &ldquo;OVERLAP&rdquo;, &ldquo;CONDENSED&rdquo;]</li>
+</ul>
+</li>
+<li>
+<p><code>AppSettings.interface_mode</code></p>
+<ul>
+<li>Light/Dark mode of app</li>
+<li>&ldquo;SYSTEM&rdquo; picks the mode from system preferences</li>
+<li>Values [&ldquo;LIGHT&rdquo;, &ldquo;DARK&rdquo;, &ldquo;SYSTEM&rdquo;]</li>
+</ul>
+</li>
+<li>
+<p><code>AppSettings.interface_theme</code></p>
+<ul>
+<li>Color theme of app</li>
+<li>Values [&ldquo;DEFAULT&rdquo;, &ldquo;COOL&rdquo;]</li>
+</ul>
+</li>
+<li>
+<p><code>AppSettings.login_layout</code> one of</p>
+<ul>
+<li>Layout of login screens</li>
+<li>Values [&ldquo;DEFAULT&rdquo;, &ldquo;ILLUSTRATION&rdquo;, &ldquo;COVER&rdquo;]</li>
+</ul>
+</li>
+<li>
+<p><code>AppSettings.multi_space_mode</code></p>
+<ul>
+<li>When true allows users to sign up and create spaces</li>
+<li>When false allows only admin to invite users and create spaces</li>
+<li>Values [true, false]</li>
+</ul>
+</li>
+<li>
+<p><code>AppSettings.show_landing_page</code></p>
+<ul>
+<li>When true root path renders landing page</li>
+<li>When false root path redirects to sign in page</li>
+<li>Values [true, false]</li>
+</ul>
+</li>
+</ul>
+<h3 id="sample-settings-for-different-use-cases">Sample settings for different use cases <a href="#sample-settings-for-different-use-cases" class="anchor">🔗</a></h3><p>Here are sample configurations for two different application types:</p>
+<ul>
+<li>Saas App</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>AppSettings.interface_layout = &#39;HORIZONTAL&#39;
+</span></span><span style="display:flex;"><span>AppSettings.interface_mode = &#39;LIGHT&#39;
+</span></span><span style="display:flex;"><span>AppSettings.interface_theme = &#39;DEFAULT&#39;
+</span></span><span style="display:flex;"><span>AppSettings.login_layout = &#39;ILLUSTRATION&#39;
+</span></span><span style="display:flex;"><span>AppSettings.multi_space_mode = true
+</span></span><span style="display:flex;"><span>AppSettings.show_landing_page = true
+</span></span></code></pre></div><ul>
+<li>Internal App</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>AppSettings.interface_layout = &#39;CONDENSED&#39;
+</span></span><span style="display:flex;"><span>AppSettings.interface_mode = &#39;LIGHT&#39;
+</span></span><span style="display:flex;"><span>AppSettings.interface_theme = &#39;DEFAULT&#39;
+</span></span><span style="display:flex;"><span>AppSettings.login_layout = &#39;DEFAULT&#39;
+</span></span><span style="display:flex;"><span>AppSettings.multi_space_mode = false
+</span></span><span style="display:flex;"><span>AppSettings.show_landing_page = false
+</span></span></code></pre></div><h2 id="deployment">Deployment <a href="#deployment" class="anchor">🔗</a></h2><ul>
+<li>Deploy on <a href="https://fly.io/docs/rails/getting-started/" target="_blank" rel="noopener">Fly.io</a></li>
+<li>Deploy on <a href="https://devcenter.heroku.com/articles/getting-started-with-rails7" target="_blank" rel="noopener">Heroku</a></li>
+</ul>
+<p>Happy coding!</p>
+
+    </div>
+
+    
+        <div class="tags">
+            
+                <a href="https://tarunvelli.site/tags/rails">rails</a>
+            
+                <a href="https://tarunvelli.site/tags/template">template</a>
+            
+                <a href="https://tarunvelli.site/tags/starter-kit">starter kit</a>
+            
+        </div>
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+        <div id="social">
+
+
+    <a class="symbol" href="mailto:tarunvelli@gmail.com" rel="me" target="_blank">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#bbbbbb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
+   <path d="M3 7l9 6l9 -6"></path>
+</svg>
+    </a>
+
+    <a class="symbol" href="https://github.com/tarunvelli" rel="me" target="_blank">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#bbbbbb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+</svg>
+    </a>
+
+    <a class="symbol" href="https://www.linkedin.com/in/tarun-velli" rel="me" target="_blank">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#bbbbbb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+   <path d="M8 11l0 5"></path>
+   <path d="M8 8l0 .01"></path>
+   <path d="M12 16l0 -5"></path>
+   <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+</svg>
+    </a>
+
+
+</div>
+
+    
+
+    
+</footer>
+
+
+
+  </body>
+</html>

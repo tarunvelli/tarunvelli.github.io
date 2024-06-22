@@ -70,9 +70,7 @@ params:
 
   # Extra links in navigation
   links:
-    - name: Projects
-      path: /project
-    - name: Posts
+    - name: All posts
       path: /post
 
   # You can put your custom css and js to `static` directory, or use remote css and js files which start with `http://` or `https://`

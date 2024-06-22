@@ -17,6 +17,12 @@ date: "2020-07-18"
   <a href="https://github.com/tarunvelli/ordbot" target="_blank" rel="noopener noreferrer">Github</a>
 </center>
 
+# About
+
+This prodcut enables order management through whatsapp. The main seller-facing product is a webapp that recieves new orders and updates the status through a drag and drop interface. The customer can send a message through whatsapp and they'll recieve a link with menu that can also take orders.
+
+I built this before whatsapp had business accounts and business specific APIs. This was a proof of concept implementation that is now out of date and will not work.
+
 # Installation
 
 ## Prerequisites

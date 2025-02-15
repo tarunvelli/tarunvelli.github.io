@@ -46,11 +46,15 @@ curl -O https://raw.githubusercontent.com/dikiaap/dotfiles/master/.oh-my-zsh/the
 
 open .zshrc in vim and change theme to oxide
 
-# OpenVPN + Pi-hole
+# VPN + Pi-hole
 
-Steps for setting up a VPN with built-in adblocking using OpenVPN and Pi-hole
+Steps for setting up a VPN with built-in adblocking using Wireguard and Pi-hole
 
-- [Detailed steps](https://docs.pi-hole.net/guides/vpn/openvpn/installation/)
+```
+curl -L https://install.pivpn.io | bash
+```
+
+- [Detailed steps](https://docs.pivpn.io/install/)
 
 # Transmission
 

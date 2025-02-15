@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>whatsapp on Tarun Vellishetty</title>
+    <title>Whatsapp on Tarun Vellishetty</title>
     <link>https://tarunvelli.site/tags/whatsapp/</link>
-    <description>Recent content in whatsapp on Tarun Vellishetty</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Whatsapp on Tarun Vellishetty</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://tarunvelli.site/tags/whatsapp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tarunvelli.site/tags/whatsapp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ordbot</title>
       <link>https://tarunvelli.site/post/ordbot/</link>
       <pubDate>Sat, 18 Jul 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://tarunvelli.site/post/ordbot/</guid>
       <description>SAAS Project that enables small to medium vendors to sell via WhatsApp</description>
     </item>
-    
   </channel>
 </rss>

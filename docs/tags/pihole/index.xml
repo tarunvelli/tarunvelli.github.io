@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>pihole on Tarun Vellishetty</title>
+    <title>Pihole on Tarun Vellishetty</title>
     <link>https://tarunvelli.site/tags/pihole/</link>
-    <description>Recent content in pihole on Tarun Vellishetty</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Pihole on Tarun Vellishetty</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://tarunvelli.site/tags/pihole/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 22 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tarunvelli.site/tags/pihole/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>VPS setup</title>
       <link>https://tarunvelli.site/post/vps-setup/</link>
       <pubDate>Sat, 22 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://tarunvelli.site/post/vps-setup/</guid>
       <description>Setup for my VPS instance that I use for VPN / Torrents. Documenting it so that I can re-setup if it gets wrecked.</description>
     </item>
-    
   </channel>
 </rss>

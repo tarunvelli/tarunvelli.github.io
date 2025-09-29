@@ -15,7 +15,7 @@ date: "2022-10-26"
 ![rails-tabler](/assets/rails-tabler.gif)
 
 <center>
-    <a href="https://rails-tabler.fly.dev" target="_blank" rel="noopener noreferrer">Demo</a> |
+    <a href="https://rails-tabler.tarunvelli.site" target="_blank" rel="noopener noreferrer">Demo</a> |
     <a href="https://github.com/tarunvelli/rails-tabler-starter" target="_blank" rel="noopener noreferrer">Github</a>
 </center>
 

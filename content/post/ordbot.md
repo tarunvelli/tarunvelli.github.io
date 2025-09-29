@@ -7,6 +7,7 @@ tags: [
     "whatsapp",
 ]
 date: "2020-07-18"
+draft: true
 ---
 
 <center>Whatsapp chatbot to place and manage orders</center>
